@@ -22,7 +22,16 @@ function get_data_for_room() {
     Lang_Curr_Functions::chainOrHotel($id);
 
 
-    $promotion_id = $_GET["package_id"];
+    if(isset($_GET["room_id"]) && $_GET["room_id"] != null) {
+        $room_id = $_GET["room_id"];
+        $redirect = false;
+        $redirect_route = null;
+    }
+    else {
+        $room_id = null;
+        $redirect = true;
+        $redirect_route = home_url()."/rooms";
+    }
     $chain = get_option('chain_id');
 
     $languages = Lang_Curr_Functions::getLanguagesArray();
@@ -63,89 +72,31 @@ function get_data_for_room() {
         $hotels_in_chain[$Property->HotelRef->HotelCode]["MaxPartialPaymentParcel"] = $Property->MaxPartialPaymentParcel;
     }
 
-    if(isset($_GET["mobile"]) && $_GET["mobile"] != null && $_GET["mobile"] == true) {
-        $mobile = "true";
-    }
-    else {
-        $mobile = "false";
-    }
-
-    $available_packages = BeApi::ApiCache('available_packages_'.$chain.'_'.$currency.'_'.$language.'_'.$mobile, BeApi::$cache_time['available_packages'], function() use ($chain, $currency, $language, $mobile){
-        return BeApi::getClientAvailablePackages($chain, $currency, $language, null, $mobile);
+    $descriptive_infos = BeApi::ApiCache('descriptive_infos_'.$chain.'_'.$language, BeApi::$cache_time['descriptive_infos'], function() use($hotels_in_chain, $language){
+        return BeApi::getHotelDescriptiveInfos($hotels_in_chain, $language);
     });
+    $descriptive_infos = new AnalyzeDescriptiveInfosRes($descriptive_infos);
 
-    foreach ($available_packages->RoomStaysType->RoomStays as $RoomStay) {
-        foreach ($RoomStay->RatePlans as $RatePlan) {
-            if($promotion_id == $RatePlan->RatePlanID) {
-                $hotel_from_package = $RoomStay->BasicPropertyInfo->HotelRef->HotelCode;
+    foreach($descriptive_infos->get()->HotelDescriptiveContentsType->HotelDescriptiveContents as $HotelDescriptiveContent) {
+        foreach($HotelDescriptiveContent->FacilityInfo->GuestRoomsType->GuestRooms as $GuestRoom) {
+            if($GuestRoom->ID == $room_id) {
+                $property = $HotelDescriptiveContent->HotelRef->HotelCode;
+                $room = $GuestRoom;
+                break;
             }
         }
     }
-    $property = $hotel_from_package;
 
-    $rateplans = [];
-    $rateplans_per_hotel = [];
-    $hotel_id = null;
-
-    $rateplans[$hotel_from_package] = BeApi::ApiCache('rateplans_array_'.$hotel_from_package.'_'.$language, BeApi::$cache_time['rateplans_array'], function() use ($hotel_from_package, $language){
-        return BeApi::getHotelRatePlans($hotel_from_package, $language);
-    });
+    if(!isset($room)) {
+        $room_id = null;
+        $redirect = true;
+        $redirect_route = home_url()."/rooms";
+    }
 
     $hotel_search = BeApi::ApiCache('hotel_search_property_'.$property.'_'.$language.'_true', BeApi::$cache_time['hotel_search_property'], function() use ($property, $language) {
         return BeApi::getHotelSearchForProperty($property, "true", $language);
     });
 
-    foreach ($rateplans as $rateplan) {
-        if($rateplan->RatePlans != null) {
-            foreach ($rateplan->RatePlans->RatePlan as $RatePlan) {
-                if ($RatePlan->RatePlanTypeCode == 11) {
-                    $rateplans_per_hotel[$rateplan->RatePlans->HotelRef->HotelCode][$RatePlan->RatePlanID] = $RatePlan;
-                }
-            }
-        }
-    }
-
-
-    foreach ($available_packages->RoomStaysType->RoomStays as $RoomStay) {
-        foreach ($RoomStay->RoomRates as $RoomRate) {
-            $package_offers[$RoomStay->BasicPropertyInfo->HotelRef->HotelCode][$RoomRate->RatePlanID]["room_rate"] = $RoomRate;
-        }
-        foreach ($RoomStay->RatePlans as $RatePlan) {
-            $package_offers[$RoomStay->BasicPropertyInfo->HotelRef->HotelCode][$RatePlan->RatePlanID]["rate_plan"] = $RatePlan;
-        }  
-    }
-
-    if($available_packages->TPA_Extensions != null) {
-        foreach ($available_packages->TPA_Extensions->MultimediaDescriptionsType->MultimediaDescriptions as  $MultimediaDescription) {
-            foreach ($package_offers as $hotel_code => $package_offer) {
-                foreach ($package_offer as $rate_plan_code => $offer) {
-                    if ($MultimediaDescription->ID == $rate_plan_code) {
-                        $package_offers[$hotel_code][$rate_plan_code]["image"] = $MultimediaDescription;
-                    }
-                }
-            }
-        }
-    }
-
-
-    if(isset($package_offers)) {
-        foreach ($package_offers as $hotel_code => $package_offer) {
-            foreach ($package_offer as $rate_plan_code => $offer) {
-                foreach ($rateplans_per_hotel as $hotel_code2 => $per_hotel) {
-                    foreach ($per_hotel as $rate_plan_code2 => $rateplan) {
-                        if($rate_plan_code2 == $rate_plan_code) {
-
-                            $package_offers[$hotel_code][$rate_plan_code]["get_rate_plans"] = $rateplan;
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-    else {
-        $package_offers = null;
-    }
 
     if($_GET['ad'] == null) {
         $adults = 1;
@@ -153,7 +104,14 @@ function get_data_for_room() {
     else {
         $adults = $_GET['ad'];
     }
-   
+
+    if($_GET['ch'] == null) {
+        $children = 0;
+    }
+    else {
+        $children = $_GET['ch'];
+    }
+
     $promocode = "";
     if($_GET['Code'] != null && $_GET['Code'] != '') {
         $promocode = $_GET['Code'];
@@ -164,15 +122,15 @@ function get_data_for_room() {
         $groupcode = $_GET['group_code'];
     }
 
+    if(isset($_GET["mobile"]) && $_GET["mobile"] != null && $_GET["mobile"] == true) {
+        $mobile = "true";
+    }
+    else {
+        $mobile = "false";
+    }
 
     $data = BeApi::getChainData($chain, $CheckIn, $CheckOut, $adults, ($_GET['ch'] != null && $_GET["ch"] > 0) ? $_GET['ch'] : 0, $_GET['ag'], $property, "false", $currency, $language, $promocode, $groupcode, $mobile);
     $data = new AnalyzeAvailRes($data);
-
-
-    $descriptive_info = BeApi::ApiCache('hotel_descriptive_info_'.$property.'_'.$language, BeApi::$cache_time['hotel_descriptive_info'], function() use ($property, $language) {
-        return BeApi::getHotelDescriptiveInfo($property, $language);
-    });
-    $descriptive_info = new AnalyzeDescriptiveInfosRes($descriptive_info);
 
     $style = BeApi::ApiCache('style_'.$property.'_'.$currency.'_'.$language, BeApi::$cache_time['omnibees.style'], function () use ($property, $currency, $language) {
         return BeApi::getPropertyStyle($property, $currency, $language);
@@ -181,9 +139,7 @@ function get_data_for_room() {
     $plugin_directory_path = plugins_url( '', __FILE__ );
     $plugins_directory = plugins_url();
 
-
-    require_once(WP_PLUGIN_DIR . '/OBPress_RoomPage/widget/assets/templates/template-rooms.php');
-
-    die();
+    require_once(WP_PLUGIN_DIR . '/OBPress_RoomPage/widget/assets/templates/template-rooms.php'); 
     
+    die();
 }
