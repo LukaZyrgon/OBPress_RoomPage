@@ -1,3 +1,27 @@
+<?php 
+	$canidates = $data->getAllRoomStayCandidates();
+
+	$AllRoomRates = [];
+	$AllRoomRatesCopy = [];
+	$AllRoomRatesAvailableForSale = [];
+	$AllRoomRatesLOS_Restricted = [];
+
+	if($data->getRoomRatesByRoomAvailability($property, $room_id, ['AvailableForSale']) != null) {
+		$AllRoomRatesAvailableForSale = $data->getRoomRatesByRoomAvailability($property, $room_id, ['AvailableForSale']);
+	}
+	if ($data->getRoomRatesByRoomAvailability($property, $room_id, ['LOS_Restricted']) !== null) {
+		$AllRoomRatesLOS_Restricted = $data->getRoomRatesByRoomAvailability($property, $room_id, ['LOS_Restricted']);
+	}
+
+	$AllRoomRates = array_merge($AllRoomRatesAvailableForSale, $AllRoomRatesLOS_Restricted);
+	$availableRooms =  count( $AllRoomRates );
+	
+	foreach($AllRoomRates as $RoomRate) {
+		$AllRoomRatesCopy[$RoomRate->RoomID] = $RoomRate;
+	}
+	$AllRoomRates = [];
+	$AllRoomRates = $AllRoomRatesCopy;
+?>
 <div class="rateplans"> 
 
 	<?php foreach($canidates as $canidate): ?>
@@ -21,26 +45,9 @@
 		}
 		?>
 
-		<?php if(isset($roomtypes) && $data->get()->RoomStaysType != null ): ?>
+		<?php if($data->get()->RoomStaysType != null ): ?>
 			<?php
-				$AllRoomRates = [];
-				$AllRoomRatesCopy = [];
-				$AllRoomRatesAvailableForSale = [];
-				$AllRoomRatesLOS_Restricted = [];
 
-				if($data->getRoomRatesByRoomAvailability($property, $room_id, ['AvailableForSale']) != null) {
-					$AllRoomRatesAvailableForSale = $data->getRoomRatesByRoomAvailability($property, $room_id, ['AvailableForSale']);
-				}
-				if ($data->getRoomRatesByRoomAvailability($property, $room_id, ['LOS_Restricted']) !== null) {
-					$AllRoomRatesLOS_Restricted = $data->getRoomRatesByRoomAvailability($property, $room_id, ['LOS_Restricted']);
-				}
-
-				$AllRoomRates = array_merge($AllRoomRatesAvailableForSale, $AllRoomRatesLOS_Restricted);
-				foreach($AllRoomRates as $RoomRate) {
-					$AllRoomRatesCopy[$RoomRate->RoomID] = $RoomRate;
-				}
-				$AllRoomRates = [];
-				$AllRoomRates = $AllRoomRatesCopy;
 
 				$AllRoomsEmpty = false;
 
@@ -101,8 +108,8 @@
 								">
 									
 						<div class="single-room-rate-name">
-							<?= substr($rate_plan->RatePlanName, 0, 20) ?>
-							<?php if(strlen($rate_plan->RatePlanName) > 20): ?>
+							<?= substr($rate_plan->RatePlanName, 0, 36) ?>
+							<?php if(strlen($rate_plan->RatePlanName) > 36): ?>
 								...
 							<?php endif; ?>
 						</div>
@@ -344,7 +351,7 @@
 		?>
 
 		<!-- Rates without prices set for a certain period of time - Hotel -->
-		<?php if(@$unavail_room_rate->Availability[0]->WarningRPH == 407 || $unavail_room_rate == null): ?>
+		<?php if(!is_null($unavail_room_rate) && $unavail_room_rate->Availability[0]->WarningRPH == 407 || $unavail_room_rate == null): ?>
 			<div class="error_message_holder">
 				<div class="error_message_left">
 					<img class="error_info_icon" src="<?= $plugins_directory."/OBPress_SpecialOffersPage/widget/assets/icons/information-button-white.svg" ?>">

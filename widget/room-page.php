@@ -9,23 +9,47 @@ class RoomPage extends \Elementor\Widget_Base
 
 		parent::__construct($data, $args);
 		
-		wp_register_script( 'room-page_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/room-page.js'), [ 'elementor-frontend' ], '1.0.0', true );
+		// wp_register_script( 'room-page_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/room-page.js'), [ 'elementor-frontend' ], '1.0.0', true );
 
-		// Prevent calling this files twice
+		// wp_register_script( 'searchbar_room_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/searchbar.js'), [], '1.0.0', true );
 
-		wp_register_script( 'searchbar_room_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/searchbar.js'), [], '1.0.0', true );
+        // wp_register_script( 'room_bootstrap_js',  'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js', [], '1.0.0', true );
+
+		// wp_register_script( 'basket_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/basket.js'), [], '1.0.0', true );
+
+		// wp_register_style( 'room-page_css', plugins_url( '/OBPress_RoomPage/widget/assets/css/room-page.css') );  
+
+        // wp_register_style( 'room_bootstrap_css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+        
+        
+
+
+
+
+
+
+		wp_register_script( 'moment_plugin_min_js', plugins_url( '/OBPress_RoomPage/widget/assets/js/vendor/moment.min.js'));
+
+		wp_register_script( 'moment_plugin_tz_js', plugins_url( '/OBPress_RoomPage/widget/assets/js/vendor/moment.tz.js'));
 
         wp_register_script( 'room_bootstrap_js',  'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js', [], '1.0.0', true );
 
-		// if ( is_home() || is_front_page()  == false ) {
-		// 	wp_register_script( 'zcalendar_special_offer_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/zcalendar.js'), [], '1.0.0', true ); 
-		// } 
+		wp_register_script( 'room-page_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/room-page.js'), [ 'elementor-frontend' ], '1.0.0', true );
+
+		wp_register_script( 'searchbar_room_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/searchbar.js'), [], '1.0.0', true );
+
+		wp_register_script( 'zcalendar_room_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/zcalendar.js'), [], '1.0.0', true ); 
 
 		wp_register_script( 'basket_js',  plugins_url( '/OBPress_RoomPage/widget/assets/js/basket.js'), [], '1.0.0', true );
 
-		wp_register_style( 'room-page_css', plugins_url( '/OBPress_RoomPage/widget/assets/css/room-page.css') );  
+        wp_register_style( 'room_bootstrap_css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+		wp_register_style( 'room-page_css', plugins_url( '/OBPress_RoomPage/widget/assets/css/room-page.css'));  
+		wp_register_style( 'zcalendar_special_css', plugins_url( '/OBPress_RoomPage/widget/assets/css/zcalendar.css') );
+		wp_register_style( 'searchbar_special_css', plugins_url( '/OBPress_RoomPage/widget/assets/css/searchbar.css') );
 
-        wp_register_style( 'room_bootstrap_css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');  
+
+
+        
         
 
 		wp_localize_script('room-page_js', 'roomAjax', array(
@@ -37,12 +61,12 @@ class RoomPage extends \Elementor\Widget_Base
 
 	public function get_script_depends()
 	{
-		return [ 'room-page_js', 'basket_js' , 'room_bootstrap_js' , 'searchbar_room_js' ];
+		return [ 'moment_plugin_min_js', 'moment_plugin_tz_js', 'room_bootstrap_js', 'room-page_js', 'basket_js' , 'zcalendar_room_js' , 'searchbar_room_js' ];
 	}
 
 	public function get_style_depends()
 	{
-		return ['room-page_css', 'room_bootstrap_css'];
+		return ['room_bootstrap_css', 'room-page_css', 'zcalendar_special_css', 'searchbar_special_css'];
 	}
 	
 	public function get_name()

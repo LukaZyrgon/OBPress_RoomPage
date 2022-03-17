@@ -446,15 +446,19 @@
 
         <?php
             $calendar_string = '';
-            $RatePlanID = $promotion_id;
-            $roomtypes = $data->getAllRoomTypes();
-            $canidates = $data->getAllRoomStayCandidates();
-            $lng_str = $language_object->Path;
-            $rate_plan = $data->getRatePlan($RatePlanID);
-            $hotel = @$data->getHotels()[$property];
 
-            $prices_filter = $data->getPricesInfo($style, $promotion_id);
-            $availableRooms =  count( $prices_filter['prices'] );
+            $AllRoomRates = [];
+            $AllRoomRatesAvailableForSale = [];
+			$AllRoomRatesLOS_Restricted = [];
+            if($data->getRoomRatesByRoomAvailability($property, $room_id, ['AvailableForSale']) != null) {
+                $AllRoomRatesAvailableForSale = $data->getRoomRatesByRoomAvailability($property, $room_id, ['AvailableForSale']);
+            }
+            if ($data->getRoomRatesByRoomAvailability($property, $room_id, ['LOS_Restricted']) !== null) {
+                $AllRoomRatesLOS_Restricted = $data->getRoomRatesByRoomAvailability($property, $room_id, ['LOS_Restricted']);
+            }
+            $AllRoomRates = array_merge($AllRoomRatesAvailableForSale, $AllRoomRatesLOS_Restricted);
+
+            $availableRooms =  count( $AllRoomRates );
         ?>
 
         <?php if($availableRooms > 0): ?>
