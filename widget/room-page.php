@@ -209,8 +209,9 @@ class RoomPage extends \Elementor\Widget_Base
             $children = $_GET['ch'];
         }
 
+		$elementor_active = \Elementor\Plugin::$instance->editor->is_edit_mode();
 
-        if($_GET["CheckIn"] == null) {
+        if($_GET["CheckIn"] == null && $elementor_active == false) {
             $redirect = true;
             $CheckInUrlParam = date('dmY');
             $CheckOutUrlParam = date("dmY", strtotime('tomorrow'));
