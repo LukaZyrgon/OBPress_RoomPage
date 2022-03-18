@@ -76,7 +76,7 @@ class RoomPage extends \Elementor\Widget_Base
 
 	public function get_title()
 	{
-		return __('Room Page', 'plugin-name');
+		return __('Room Page', 'OBPress_RoomPage');
 	}
 
 	public function get_icon()
@@ -91,6 +91,15 @@ class RoomPage extends \Elementor\Widget_Base
 	
 	protected function _register_controls()
 	{
+		$this->start_controls_section(
+			'color_section',
+			[
+				'label' => __('Package Main Image Style', 'OBPress_RoomPage'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+        $this->end_controls_section();
 	}
 
 	protected function render()

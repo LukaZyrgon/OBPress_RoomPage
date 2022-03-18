@@ -118,22 +118,22 @@
 							<?php foreach($rate_plan->CancelPenalties as $cancellation): ?>
 								<?php if($cancellation->NonRefundable == false && ($cancellation->AmountPercent->Amount == 0 && $cancellation->AmountPercent->Percent == 0 && $cancellation->AmountPercent->NmbrOfNights == 0)): ?>
 									<?php if($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d >= $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Cancelamento Grátis</div>
+										<div class="cancellation_policy"><?php _e('Free Cancellation', 'OBPress_RoomPage') ?></div>
 									<?php elseif($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d < $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Não Reembolsável</div>
+										<div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 									<?php else: ?>
-										<div class="cancellation_policy">Cancelamento Grátis</div>
+										<div class="cancellation_policy"><?php _e('Free Cancellation', 'OBPress_RoomPage') ?></div>
 									<?php endif; ?>
 								<?php elseif($cancellation->NonRefundable == false && ($cancellation->AmountPercent->Amount != 0 || $cancellation->AmountPercent->Percent != 0 || $cancellation->AmountPercent->NmbrOfNights != 0)): ?>
 									<?php if($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d >= $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Permite Cancelamento    </div>
+										<div class="cancellation_policy"><?php _e('Allow Cancellation', 'OBPress_RoomPage') ?> </div>
 									<?php elseif($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d <= $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Não Reembolsável</div>
+										<div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 									<?php else: ?>
-										<div class="cancellation_policy">Permite Cancelamento</div>
+										<div class="cancellation_policy"><?php _e('Allow Cancellation', 'OBPress_RoomPage') ?></div>
 									<?php endif; ?>
 								<?php elseif($cancellation->NonRefundable == true): ?>
-									<div class="cancellation_policy">Não Reembolsável</div>
+									<div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 								<?php endif; ?>
 							<?php endforeach; ?>
 						<?php endif; ?>
@@ -168,7 +168,7 @@
 									<p class="price-after <?php if($first_roomrate == true) echo 'best-price'; ?>">
 										<?= Lang_Curr_Functions::ValueAndCurrencyCultureV4(@$roomrate->Total->AmountBeforeTax, $currencies, $currency, $language) ?>
 									</p>
-									<span class="single-tax-msg">Inclui impostos e taxas</span>
+									<span class="single-tax-msg"><?php _e('Includes taxes and fees', 'OBPress_RoomPage') ?></span>
 									<?php 
 										if($first_roomrate == true) {
 											$first_roomrate = false;
@@ -177,9 +177,9 @@
 								</div>
 
 								<div class="single-room-button">
-									<div class="text-number-of-rooms">Nº de quartos</div>
+									<div class="text-number-of-rooms"><?php _e('Nº of rooms', 'OBPress_RoomPage') ?></div>
 									<div class="obpress-hotel-results-button-bottom">
-										<button class="room-btn-add btn-ic custom-action-border custom-action-text custom-action-bg">Reservar agora</button>     
+										<button class="room-btn-add btn-ic custom-action-border custom-action-text custom-action-bg"><?php _e('Book Now', 'OBPress_RoomPage') ?>  </button>   
 										<button href="#" class="room-btn-minus btn-ic custom-action-border custom-action-text custom-action-bg">-</button><span class="room-btn-value custom-action-border-top custom-action-border-bottom">0</span><button href="#" class="room-btn-plus btn-ic custom-action-border custom-action-text custom-action-bg">+</button>
 									</div>
 								</div>
@@ -251,22 +251,22 @@
 							<?php foreach($rate_plan->CancelPenalties as $cancellation): ?>
 								<?php if($cancellation->NonRefundable == false && ($cancellation->AmountPercent->Amount == 0 && $cancellation->AmountPercent->Percent == 0 && $cancellation->AmountPercent->NmbrOfNights == 0)): ?>
 									<?php if($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d >= $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Cancelamento Grátis</div>
+										<div class="cancellation_policy"><?php _e('Free Cancellation', 'OBPress_RoomPage') ?></div>
 									<?php elseif($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d < $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Não Reembolsável</div>
+										<div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 									<?php else: ?>
-										<div class="cancellation_policy">Cancelamento Grátis</div>
+										<div class="cancellation_policy"><?php _e('Free Cancellation', 'OBPress_RoomPage') ?></div>
 									<?php endif; ?>
 								<?php elseif($cancellation->NonRefundable == false && ($cancellation->AmountPercent->Amount != 0 || $cancellation->AmountPercent->Percent != 0 || $cancellation->AmountPercent->NmbrOfNights != 0)): ?>
 									<?php if($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d >= $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Permite Cancelamento    </div>
+										<div class="cancellation_policy"><?php _e('Allow Cancellation', 'OBPress_RoomPage') ?></div>
 									<?php elseif($cancellation->DeadLine != null && $today->diff($CheckInPolicy)->d <= $cancellation->DeadLine->OffsetUnitMultiplier): ?>
-										<div class="cancellation_policy">Não Reembolsável</div>
+										<div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 									<?php else: ?>
-										<div class="cancellation_policy">Permite Cancelamento</div>
+										<div class="cancellation_policy"><?php _e('Allow Cancellation', 'OBPress_RoomPage') ?></div>
 									<?php endif; ?>
 								<?php elseif($cancellation->NonRefundable == true): ?>
-									<div class="cancellation_policy">Não Reembolsável</div>
+									<div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 								<?php endif; ?>
 							<?php endforeach; ?>
 						<?php endif; ?>
@@ -301,7 +301,7 @@
 									<p class="price-after <?php if($first_roomrate == true) echo 'best-price'; ?>">
 										<?= Lang_Curr_Functions::ValueAndCurrencyCultureV4(@$roomrate->Total->AmountBeforeTax, $currencies, $currency, $language) ?>
 									</p>
-									<span class="single-tax-msg">Inclui impostos e taxas</span>
+									<span class="single-tax-msg"><?php _e('Includes taxes and fees', 'OBPress_RoomPage') ?></span>
 									<?php 
 										if($first_roomrate == true) {
 											$first_roomrate = false;
@@ -357,12 +357,12 @@
 					<img class="error_info_icon" src="<?= $plugins_directory."/OBPress_SpecialOffersPage/widget/assets/icons/information-button-white.svg" ?>">
 					<div class="error_message">
 						<div class="error_message_description">
-							Não existem quartos disponíveis para as datas indicadas.
+							<?php _e('There are no rooms available for the dates indicated.', 'OBPress_RoomPage') ?>
 						</div>
 					</div>
 				</div>
 				<button class="error_message_btn_calendar">
-					Altere a sua pesquisa
+					<?php _e('Change your search', 'OBPress_RoomPage') ?>
 				</button>
 			</div>
 
@@ -373,12 +373,12 @@
 					<img class="error_info_icon" src="<?= $plugins_directory."/OBPress_SpecialOffersPage/widget/assets/icons/information-button-white.svg" ?>">
 					<div class="error_message">
 						<div class="error_message_description">
-							Não existem quartos disponíveis para a ocupação indicada.
+						`	<?php _e('There are no rooms available for the dates indicated.', 'OBPress_RoomPage') ?>
 						</div>
 					</div>
 				</div>
 				<button class="error_message_btn_occupancy">
-					Altere a sua pesquisa
+					<?php _e('Change your search', 'OBPress_RoomPage') ?>
 				</button>
 			</div>
 		<?php endif; ?>
