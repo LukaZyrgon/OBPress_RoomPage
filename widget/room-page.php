@@ -5,7 +5,7 @@ class RoomPage extends \Elementor\Widget_Base
 
 	public function __construct($data = [], $args = null) {
 
-		$rpom_page = true;
+
 
 		parent::__construct($data, $args);
 		
@@ -94,7 +94,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'color_section',
 			[
-				'label' => __('Package Main Image Style', 'OBPress_RoomPage'),
+				'label' => __('Room Main Style', 'OBPress_RoomPage'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);

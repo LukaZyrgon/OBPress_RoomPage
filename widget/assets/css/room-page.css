@@ -390,6 +390,7 @@ form {
 .obpress-room-rooms-basket {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 #room-results {
@@ -403,7 +404,7 @@ form {
     top: 156px;        
     box-shadow: 0px 4px 7px #00000029;
     background-color: #fff;   
-    margin-top: 25px; 
+    /* margin-top: 25px;  */
     margin-bottom: 20px;
 }
 
@@ -814,20 +815,31 @@ form {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 25px;
+  max-width: 818px;
+  justify-content: space-between;
 }
 
 .roomrateinfo {
   background-color: #EEEEEE;
   padding: 20px 31px 21px 31px;
-  width: 395px;
+  /* width: 395px; */
+  width: 48%;
   min-height: 244px;
-  margin-bottom: 14px;
-  margin-top: 14px;
+  /* margin-bottom: 14px; */
+  margin-top: 28px;
   display: flex;
   flex-direction: column;
 }
 
-.roomrateinfo:nth-child(odd) {
+.roomrateinfo:first-child {
+  margin-top: 0px;
+}
+
+.roomrateinfo:nth-child(2) {
+  margin-top: 0px;
+}
+
+/* .roomrateinfo:nth-child(odd) {
   margin-right: 14px;
 }
 
@@ -844,7 +856,7 @@ form {
 .roomrateinfo:nth-last-child(2) {
   margin-top: 14px;
   margin-bottom: 0px;
-}
+} */
 
 .single-room-rate-name {
   font-size: 16px;
