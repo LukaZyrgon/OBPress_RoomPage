@@ -830,45 +830,6 @@
 						<div class="single-room-rate-name">
                             Best Available Rate - AI													
 						</div>
-                        <div class="cancellation_policy"><?php _e('Free Cancellation', 'OBPress_RoomPage') ?></div>
-
-						<div class="included">
-                            <span class="meals_included">
-                                <span class="dot">⬤</span> All Inclusive               
-                            </span>
-                            <span class="service_included">
-                                <span class="dot">⬤</span> Wi-Fi
-                            </span>
-						</div>
-						<div class="single-room-rate-bottom">
-                            <p class="price-before">
-                                <del>
-                                    <span class="currency_symbol_price">R$</span> 600.<span class="decimal_value_price">00</span>
-                                </del>
-                            </p>
-							<div class="single-room-price-and-button">
-								<div class="single-room-price">
-									<p class="price-after">
-                                        <span class="currency_symbol_price">R$</span> 460.<span class="decimal_value_price">00</span>
-									</p>
-									<span class="single-tax-msg"><?php _e('Includes taxes and fees', 'OBPress_RoomPage') ?></span>
-								</div>
-								<div class="single-room-button">
-									<div class="text-number-of-rooms"><?php _e('Nº of rooms', 'OBPress_RoomPage') ?></div>
-									<div class="obpress-hotel-results-button-bottom">
-										<button class="room-btn-add btn-ic custom-action-border custom-action-text custom-action-bg"><?php _e('Book Now', 'OBPress_RoomPage') ?>  </button>   
-										<button href="#" class="room-btn-minus btn-ic custom-action-border custom-action-text custom-action-bg">-</button>
-                                        <span class="room-btn-value custom-action-border-top custom-action-border-bottom">0</span>
-                                        <button href="#" class="room-btn-plus btn-ic custom-action-border custom-action-text custom-action-bg">+</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-                    <div class="single-room-rate-info roomrateinfo">
-						<div class="single-room-rate-name">
-                            Best Available Rate - AI													
-						</div>
                         <div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 
 						<div class="included">
@@ -893,8 +854,47 @@
 									<span class="single-tax-msg"><?php _e('Includes taxes and fees', 'OBPress_RoomPage') ?></span>
 								</div>
 								<div class="single-room-button">
-                                    <div class="text-number-of-rooms" style="display: block;">Nº de quartos</div>
+                                    <div class="text-number-of-rooms"><?php _e('Nº of rooms', 'OBPress_RoomPage') ?></div>
 									<div class="obpress-hotel-results-button-bottom">
+                                        <button class="room-btn-add btn-ic custom-action-border custom-action-text custom-action-bg"><?php _e('Book Now', 'OBPress_RoomPage') ?>  </button>  
+										<button href="#" class="room-btn-minus btn-ic custom-action-border custom-action-text custom-action-bg">-</button>
+                                        <span class="room-btn-value custom-action-border-top custom-action-border-bottom">0</span>
+                                        <button href="#" class="room-btn-plus btn-ic custom-action-border custom-action-text custom-action-bg">+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="single-room-rate-info roomrateinfo">
+						<div class="single-room-rate-name">
+                            Best Available Rate - AI													
+						</div>
+                        <div class="cancellation_policy"><?php _e('Free Cancellation', 'OBPress_RoomPage') ?></div>
+
+						<div class="included">
+                            <span class="meals_included">
+                                <span class="dot">⬤</span> All Inclusive               
+                            </span>
+                            <span class="service_included">
+                                <span class="dot">⬤</span> Wi-Fi
+                            </span>
+						</div>
+						<div class="single-room-rate-bottom">
+                            <p class="price-before">
+                                <del>
+                                    <span class="currency_symbol_price">R$</span> 600.<span class="decimal_value_price">00</span>
+                                </del>
+                            </p>
+							<div class="single-room-price-and-button">
+								<div class="single-room-price">
+									<p class="price-after">
+                                        <span class="currency_symbol_price">R$</span> 460.<span class="decimal_value_price">00</span>
+									</p>
+									<span class="single-tax-msg"><?php _e('Includes taxes and fees', 'OBPress_RoomPage') ?></span>
+								</div>
+								<div class="single-room-button">
+                                    <div class="text-number-of-rooms" style="display: block;">Nº de quartos</div>
+									<div class="obpress-hotel-results-button-bottom"> 
                                         <button href="#" class="room-btn-minus btn-ic custom-action-border custom-action-text custom-action-bg" style="display: flex;">-</button>
                                         <span class="room-btn-value custom-action-border-top custom-action-border-bottom" style="display: flex;">1</span>
                                         <button href="#" class="room-btn-plus btn-ic custom-action-border custom-action-text custom-action-bg" style="display: flex;">+</button>
