@@ -10,7 +10,7 @@
     $amenity_categories = [];
 ?>
 
-<?php if(isset($_GET["room_id"])): ?>
+<?php if(!is_null($room_id)): ?>
 	<div class="single-room" data-redirect="<?= $redirect ?>" data-redirect-url="<?= $redirect_route ?>" data-room-id="<?= $room_id ?>">
 
         <div class="see_more_room_photos" data-bs-toggle="modal" data-bs-target="#room-gallery-modal"> <?php _e('More', 'OBPress_RoomPage') ?> <?= count($room->MultimediaDescriptionsType->MultimediaDescriptions[1]->ImageItemsType->ImageItems); ?> <?php _e('photos', 'OBPress_RoomPage') ?></div>
@@ -144,7 +144,6 @@
         <?php echo $hotelFolders ; ?>
 
         <form type="POST" action="" class="room-form">
-
             <div class="ob-searchbar obpress-hotel-searchbar-custom container" id="index" data-hotel-folders="<?php echo htmlspecialchars(json_encode($hotelFolders), ENT_QUOTES, 'UTF-8'); ?>">
                 <div class="ob-searchbar-hotel">
                     <p>
@@ -173,9 +172,6 @@
 
                     <input type="hidden" name="c" value="<?php echo get_option('chain_id') ?>">
                     <input type="hidden" name="q" id="hotel_code" value="<?php echo $data->getHotels()[$property]['HotelCode'] ?>">
-
-
-
                     <input type="hidden" name="currencyId" value="<?= (isset($_GET['currencyId'])) ? $_GET['currencyId'] : get_option('default_currency_id') ?>">
                     <input type="hidden" name="lang" value="<?= (isset($_GET['lang'])) ? $_GET['lang'] : get_option('default_language_id') ?>">
                     <input type="hidden" name="hotel_folder" id="hotel_folder">
@@ -293,8 +289,6 @@
                                     </div>
                                     <div class="select-child-ages-holder">
                                         <div class="select-child-ages-clone">
-
-
                                             <p class="select-child-ages-title custom-text"><?php _e('Age', 'OBPress_RoomPage'); ?> <span class="select-child-ages-number"></span></p>
 
                                             <div class="age-picker"> 
@@ -314,20 +308,15 @@
                                                 </select>
 
                                             </div>
-
-                                        
-
                                             <div class="child-ages-input">
-                                                
                                             </div>
-
                                             <p class="incorect-age custom-text"><?php _e('Incorrect Age', 'OBPress_RoomPage') ?></p>
 
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="add-room-mobile">+ <?php _e('Ddd another room', 'OBPress_RoomPage') ?>/div>
+                                <div class="add-room-mobile">+ <?php _e('Ddd another room', 'OBPress_RoomPage') ?></div>
                                 
                             </div>
                         </div>
@@ -347,63 +336,59 @@
                     </div>
                 </div>
 
-
-
-                    <div class="ob-searchbar-promo">
-                        <p><?php _e('I have a code', 'OBPress_RoomPage'); ?></p>
-                        <input type="text" id="promo_code" value="" placeholder="<?php _e('Choose type', 'OBPress_RoomPage') ?>" readonly>
-                        <div class="material-check custom-checkbox-holde ob-mobile-i-have-a-code">
-                            <div class="mdc-touch-target-wrapper">
-                                <div class="mdc-checkbox mdc-checkbox--touch">
-                                    <input class="board_check mdc-checkbox__native-control checkbox-custom checkbox-custom ob-mobile-i-have-a-code-input" type="checkbox" name="1" id="i_have_a_code">
-                                    <div class="mdc-checkbox__background">
-                                        <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                            <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
-                                        </svg>
-                                        <div class="mdc-checkbox__mixedmark"></div>
-                                    </div>
+                <div class="ob-searchbar-promo">
+                    <p><?php _e('I have a code', 'OBPress_RoomPage'); ?></p>
+                    <input type="text" id="promo_code" value="" placeholder="<?php _e('Choose type', 'OBPress_RoomPage') ?>" readonly>
+                    <div class="material-check custom-checkbox-holde ob-mobile-i-have-a-code">
+                        <div class="mdc-touch-target-wrapper">
+                            <div class="mdc-checkbox mdc-checkbox--touch">
+                                <input class="board_check mdc-checkbox__native-control checkbox-custom checkbox-custom ob-mobile-i-have-a-code-input" type="checkbox" name="1" id="i_have_a_code">
+                                <div class="mdc-checkbox__background">
+                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                                    </svg>
+                                    <div class="mdc-checkbox__mixedmark"></div>
                                 </div>
                             </div>
-                            <label class="form-check-label" for="i_have_a_code">
-                                <span class="checkbox-custom-label"><?php _e('I HAVE A CODE', 'OBPress_RoomPage'); ?></span>
-                            </label>
                         </div>
-                        <div id="promo_code_dropdown" class="position-absolute custom-bg custom-text">
-                            <div class="mb-3 mt-2">
-                                <p class="input-title"><?php _e('GROUP CODE', 'OBPress_RoomPage') ?></p>
-                                <div class="material-textfield">
-                                    <input type="text" id="group_code" name="group_code" placeholder="<?php _e('Enter your code', 'OBPress_RoomPage') ?>">
-                                    <span class="label-title"><?php _e('GROUP CODE', 'OBPress_RoomPage') ?></span>
-                                </div>
+                        <label class="form-check-label" for="i_have_a_code">
+                            <span class="checkbox-custom-label"><?php _e('I HAVE A CODE', 'OBPress_RoomPage'); ?></span>
+                        </label>
+                    </div>
+                    <div id="promo_code_dropdown" class="position-absolute custom-bg custom-text">
+                        <div class="mb-3 mt-2">
+                            <p class="input-title"><?php _e('GROUP CODE', 'OBPress_RoomPage') ?></p>
+                            <div class="material-textfield">
+                                <input type="text" id="group_code" name="group_code" placeholder="<?php _e('Enter your code', 'OBPress_RoomPage') ?>">
+                                <span class="label-title"><?php _e('GROUP CODE', 'OBPress_RoomPage') ?></span>
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <p class="input-title"><?php _e('PROMO CODE', 'OBPress_RoomPage'); ?></p>
-                                <div class="material-textfield">
-                                    <input type="text" id="Code" name="Code" placeholder="<?php _e('Enter your code', 'OBPress_RoomPage') ?>">
-                                    <span class="label-title"><?php _e('PROMO CODE', 'OBPress_RoomPage'); ?></span>
-                                </div>
+                        <div class="mb-3">
+                            <p class="input-title"><?php _e('PROMO CODE', 'OBPress_RoomPage'); ?></p>
+                            <div class="material-textfield">
+                                <input type="text" id="Code" name="Code" placeholder="<?php _e('Enter your code', 'OBPress_RoomPage') ?>">
+                                <span class="label-title"><?php _e('PROMO CODE', 'OBPress_RoomPage'); ?></span>
                             </div>
+                        </div>
 
-                            <div class="mb-3">
-                                <p class="input-title"><?php _e('LOYALTY CODE', 'OBPress_RoomPage') ?></p>
-                                <div class="material-textfield">
-                                    <input type="text" id="loyalty_code" name="loyalty_code" placeholder="<?php _e('Enter your code', 'OBPress_RoomPage') ?>">
-                                    <span class="label-title"><?php _e('LOYALTY CODE', 'OBPress_RoomPage') ?></span>
-                                </div>
+                        <div class="mb-3">
+                            <p class="input-title"><?php _e('LOYALTY CODE', 'OBPress_RoomPage') ?></p>
+                            <div class="material-textfield">
+                                <input type="text" id="loyalty_code" name="loyalty_code" placeholder="<?php _e('Enter your code', 'OBPress_RoomPage') ?>">
+                                <span class="label-title"><?php _e('LOYALTY CODE', 'OBPress_RoomPage') ?></span>
                             </div>
+                        </div>
 
-                            <div class="text-right">
-                                <button id="promo_code_apply" class="custom-action-bg custom-action-text custom-action-border btn-ic"><?php _e('Apply', 'OBPress_RoomPage'); ?></button>
-                            </div>
+                        <div class="text-right">
+                            <button id="promo_code_apply" class="custom-action-bg custom-action-text custom-action-border btn-ic"><?php _e('Apply', 'OBPress_RoomPage'); ?></button>
                         </div>
                     </div>
-                    
-        
-
-                    <div class="ob-searchbar-button">
-                        <button class="ob-searchbar-submit" type="button"><?php _e('Search', 'OBPress_RoomPage'); ?></button>
-                    </div> 
+                </div>
+                
+                <div class="ob-searchbar-button">
+                    <button class="ob-searchbar-submit" type="button"><?php _e('Search', 'OBPress_RoomPage'); ?></button>
+                </div> 
 
             </div>
             <div class="zcalendar-wrap">

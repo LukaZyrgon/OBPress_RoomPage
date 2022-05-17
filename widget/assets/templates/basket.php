@@ -95,7 +95,7 @@
                                 <span class="obpress-hotel-basket-stay-rooms-num"> 1 </span>
                             </span>
                             <span class="obpress-hotel-basket-stay-nights">
-                                <span class="obpress-hotel-basket-stay-nights-string"><?php _e('Nights', 'OBPress_RoomPage') ?>
+                                <span class="obpress-hotel-basket-stay-nights-string"><?php _e('Nights', 'OBPress_RoomPage') ?></span> 
                                 <span class="obpress-hotel-basket-stay-nights-num"> <?php echo $nights; ?> </span>                            
                             </span>
                             <span class="obpress-hotel-basket-stay-guests">
