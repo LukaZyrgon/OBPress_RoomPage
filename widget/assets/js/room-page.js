@@ -45,15 +45,13 @@ jQuery(window).on("elementor/frontend/init", function () {
         var ch = $("#ch").val();
         var ag = $("#ag").val();
 
-        $.get(specialOfferAjax.ajaxurl+"?action=get_data_for_rooms&room_id=" + room_id + "&CheckIn=" +  CheckIn + "&CheckOut=" + 
+        $.get(roomAjax.ajaxurl+"?action=get_data_for_room&room_id=" + room_id + "&CheckIn=" +  CheckIn + "&CheckOut=" + 
           CheckOut + "&ad=" + ad + "&ch=" + ch + "&ag=" + ag , function( res ) {
           $("#room-results").empty();
           $("#room-results").html(res);
 
-          console.log("stigo");
+          console.log(res);
 
-          //change url in browser
-          // window.history.pushState(  "", "Title", url_no_parametres + "?" + $( $("#rate_plan_form-lp")[0].elements ).not(".chain, #hotel_code").serialize()   );
         })
       });
 

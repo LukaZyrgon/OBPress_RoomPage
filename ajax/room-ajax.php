@@ -11,7 +11,6 @@ add_action('wp_ajax_nopriv_get_data_for_room', 'get_data_for_room');
 function get_data_for_room() {
 
 
-
     require_once(WP_CONTENT_DIR . '/plugins/obpress_plugin_manager/BeApi/BeApi.php');
     require_once(WP_PLUGIN_DIR . '/obpress_plugin_manager/class-lang-curr-functions.php');
     require_once(WP_PLUGIN_DIR . '/obpress_plugin_manager/class-analyze-avail.php');
