@@ -95,6 +95,10 @@ jQuery(document).ready(function($){
             } else {
 
                 $(this).find(".room-btn-add").prop("disabled", false);
+
+                 if ( maximumRoomsSelected == true ) {
+                    $(".room-btn-add").prop("disabled", "disabled");
+                 }
                 
             }
 
@@ -147,8 +151,8 @@ jQuery(document).ready(function($){
 
         var max_total = 20; //maximum quantity total of rooms for hotel
 
-        if ( Number($(this).closest("#hotels_grid").attr("data-max-rooms")) > 0 ) {
-            max_total = Number($(this).closest("#hotels_grid").attr("data-max-rooms"));
+        if ( Number($(this).closest("#room-results").attr("data-max-rooms")) > 0 ) {
+            max_total = Number($(this).closest("#room-results").attr("data-max-rooms"));
         }
 
         var max = 10; //maximum quantity for room
@@ -236,12 +240,17 @@ jQuery(document).ready(function($){
             $(".room-btn-plus").prop("disabled", "disabled");
             $(".room-btn-add").prop("disabled", "disabled");
 
+            maximumRoomsSelected = true;
+
              if ( room_quantity >= max )  { 
                   room.addClass("maximum");
                }
 
                
     } else {  // if not, enable pluses
+
+
+             maximumRoomsSelected = false;
 
 
              // enable all pluses , except the one that went to maximum
@@ -419,16 +428,14 @@ jQuery(document).ready(function($){
 
         e.preventDefault();
 
-
         // show loader
-        $("body > .container").hide();
-        $(".next-step-loader").css("display", "flex");
+        $(".single-room").hide();
+        $(".next-step-loader-next-page").css("display", "flex");
         $(".obpress-footer").hide();
 
 
         var chain = $("input[name='c']").val();
         var data = {};
-        //data._token = $("#token").val(); // TODO
         data.sid = ( Math.random() + 1 ).toString(36).substring( 2,8 );
         var reservation = {};
 
@@ -486,7 +493,7 @@ jQuery(document).ready(function($){
                 var occupancie = {};
 
                 room.room_id = Number($(this).attr("data-room-id"));
-                room.room_name = $(this).attr("data-name");
+                room.room_name = $(".single-room-name").html();
                 room.selected_rate_plan = Number($(this).attr("data-rate-id"));
                 room.rate_name = $(this).attr("data-rate-name");
                 room.adults = Number($(this).attr("data-adults"));
@@ -571,6 +578,8 @@ jQuery(document).ready(function($){
 
         }
 
+        console.log(reservation);
+
         data.reservation = JSON.stringify(reservation);
 
         // send ajax request step 2 save
@@ -600,15 +609,16 @@ jQuery(document).ready(function($){
                 url = updateUrlParam('sid',data.sid,url);
                 url = updateUrlParam('CheckIn',newCheckIn.join(','),url);
                 url = updateUrlParam('CheckOut',newCheckOut.join(','),url);
-                url = updateUrlParam('ad',newAd.join(','),url);
-                url = updateUrlParam('ch',newCh.join(','),url);
-                url = updateUrlParam('ag',newAg.join(','),url);
+
+                url = updateUrlParam('ad',old_occupancy.adults,url);
+                url = updateUrlParam('ch',old_occupancy.children,url);
+                url = updateUrlParam('ag',old_occupancy.ages,url);
 
                 if (rooms.length == 1) {
                     url = updateUrlParam('roomuids', room_id_single, url);
                     url = updateUrlParam('rateuids', rateplan_id_single, url);
                 }
-                console.log(url);
+
                 window.location.href = url; // redirect  
 
             },

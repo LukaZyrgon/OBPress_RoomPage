@@ -79,8 +79,9 @@
 					data-price-before-discount="<?= isset($roomrate->Total->TPA_Extensions->TotalDiscountValue) ? (@$roomrate->Total->TPA_Extensions->TotalDiscountValue+@$roomrate->Total->AmountBeforeTax)/$nights : "" ?>" 
 					data-tax-policy-name="Taxas de Serviço e ISS" 
 					data-total-price-after-tax="<?php echo $roomrate->Total->AmountAfterTax; ?>"
-					data-children-ages="" data-rate-id="<?= $roomrate->RatePlanID ?>"
-					data-room-id="<?php echo $room->RoomID; ?>"
+					data-children-ages="" 
+					data-rate-id="<?= $roomrate->RatePlanID ?>"
+					data-room-id="<?php echo $room->ID; ?>"
 
 					        data-rph="<?= $roomrate->RoomStayCandidateRPH ?>" 
                             data-start="<?= $roomrate->EffectiveDate ?>" 
