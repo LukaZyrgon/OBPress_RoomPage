@@ -450,6 +450,17 @@
                 <?php require_once(WP_PLUGIN_DIR . '/OBPress_RoomPage/widget/assets/templates/template-rooms.php'); ?>
             </div>
 
+            <div class="next-step-loader">
+                <div class="gooey">
+                    <span class="dot"></span>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
             <!--  Get basket html -->
             <?php require_once( WP_PLUGIN_DIR . '/OBPress_RoomPage/widget/assets/templates/basket.php'); ?>
         </div>

@@ -33,10 +33,35 @@ jQuery(window).on("elementor/frontend/init", function () {
       var url_no_parametres = location.protocol + '//' + location.host + location.pathname;
 
       $(".ob-searchbar-submit").click(function() {
-        // var data = {};
-        // var action = "get_data_for_rooms";
 
-        // data.action = action;
+        $("#room-results").empty();
+
+        $(".next-step-loader").show();
+
+        // update info in basket
+
+        $(".obpress-hotel-basket-stay-checkin-date").html(  moment( $("#date_from").val(), "DDMMYYYY").format("DD MMM") );
+
+        $(".obpress-hotel-basket-stay-checkout-date").html( moment( $("#date_to").val(), "DDMMYYYY").format("DD MMM") );
+
+        var occAdultsRooms = $("#ad").val().split(",");
+
+        $(".obpress-hotel-basket-stay-rooms-num").html( occAdultsRooms.length );
+
+        var occAdults = 0;
+
+        for (i = 0 ; i < occAdultsRooms.length ; i++) {
+            occAdults += Number(occAdultsRooms[i]);
+        }
+
+        $(".obpress-hotel-basket-stay-guests-num").html( occAdults );
+
+        var startDay =  moment( $("#date_from").val(), "DDMMYYYY");
+        var endDay = moment( $("#date_to").val(), "DDMMYYYY");
+
+        $(".obpress-hotel-basket-stay-nights-num").html( endDay.diff(startDay, 'days') );
+
+
 
         var room_id = $(".single-room").data("room-id");
         var CheckIn = $("#date_from").val();
@@ -47,10 +72,9 @@ jQuery(window).on("elementor/frontend/init", function () {
 
         $.get(roomAjax.ajaxurl+"?action=get_data_for_room&room_id=" + room_id + "&CheckIn=" +  CheckIn + "&CheckOut=" + 
           CheckOut + "&ad=" + ad + "&ch=" + ch + "&ag=" + ag , function( res ) {
-          $("#room-results").empty();
+          
+          $(".next-step-loader").hide();
           $("#room-results").html(res);
-
-          console.log(res);
 
         })
       });
