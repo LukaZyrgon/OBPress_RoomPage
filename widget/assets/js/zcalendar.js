@@ -76,8 +76,6 @@ jQuery(document).ready(function($){
             .add(this.daysMin, "days")
             .startOf("day")
             .add(12, "hours"); //second pick
-
-              console.log(this.first, this.second );
   
           //default values
           this.start = this.first.clone();
@@ -2110,7 +2108,7 @@ jQuery(document).ready(function($){
           doFetch: true,
           promo: false,
           onSelect: function () {
-console.log(this.isRangeSelected);
+
             document.querySelector("input[name='CheckIn']").value =
               this.start.format(this.outputDateFormat);
 
