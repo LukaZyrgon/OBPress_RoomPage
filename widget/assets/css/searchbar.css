@@ -138,6 +138,12 @@ button:disabled {
     cursor: pointer;
 }
 
+#hotels {
+    background-image: none;
+    background-color: #D8DDE8;
+    padding-left: 10px;
+}
+
 #promo_code {
     background-image: url(../../assets/icons/down.png);
     background-repeat: no-repeat;

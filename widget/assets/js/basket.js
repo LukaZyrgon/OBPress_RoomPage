@@ -778,6 +778,8 @@ jQuery(document).ready(function($){
        
        update_cart();
 
+       $(".room-btn-add").prop("disabled", false);
+
 
     });
     
