@@ -697,6 +697,7 @@
 		background-color: #fff;
 		scrollbar-color: #000 #E8E8E8;
 		scrollbar-width: thin;
+		left: 0;
 	}
 	
 	.ob-zcalendar-top {
@@ -756,6 +757,7 @@
 		padding: 20px 30px;
 		box-shadow: 0px 0px 20px #746969;
 		text-align: center;
+		left: 0;
 	}
 
 	.zc-info-bar {

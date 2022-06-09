@@ -175,7 +175,7 @@ jQuery(document).ready(function($){
     $(".obpress-hotel-results-basket-price").click();
 
     $([document.documentElement, document.body]).animate({
-        scrollTop: $("#index").offset().top - 200
+        scrollTop: $("#index").offset().top 
     }, 0);
 
   });
@@ -186,7 +186,7 @@ jQuery(document).ready(function($){
   $(document).on("click", ".restricted_modify_search", function() {
 
     $([document.documentElement, document.body]).animate({
-        scrollTop: $("#calendar_dates").offset().top 
+        scrollTop: $("#calendar_dates").offset().top - 200
     }, 500);
 
     $("#calendar_dates").click();

@@ -2127,11 +2127,13 @@ jQuery(document).ready(function($){
             //set dates to be shown
   
             var range = this.start.format(this.outputShowFormat);
+            var range_mob_start = this.start.format(this.outputShowFormat);
             var mobileRangeCheckIn = this.start.format(this.outputShowFormatMobile);
             var mobileRangeCheckOut = this.end.format(this.outputShowFormatMobile);
   
             if (lang == 1) {
               range = moment(range, "DD/MM/YYYY").format("MM/DD/YYYY");
+              range_mob_start = range;
               mobileRangeCheckIn = moment(mobileRangeCheckIn, "DD MMM YYYY").format("MMM DD YYYY");
               mobileRangeCheckOut = moment(mobileRangeCheckOut, "DD MMM YYYY").format("MMM DD YYYY");
             }
@@ -2144,6 +2146,7 @@ jQuery(document).ready(function($){
   
               if (lang != 1) {
                 range = range + " - " + this.end.format(this.outputShowFormat);
+                var range_mob_end = this.end.format(this.outputShowFormat);
               }
   
               if (lang == 1) {
@@ -2152,6 +2155,7 @@ jQuery(document).ready(function($){
                   range +
                   " - " +
                   moment(end_date, "DD/MM/YYYY").format("MM/DD/YYYY");
+                  var range_mob_end = moment(end_date, "DD/MM/YYYY").format("MM/DD/YYYY");
               }
   
               jQuery("input[name='CheckOut']").trigger("change");
@@ -2164,9 +2168,12 @@ jQuery(document).ready(function($){
 
             } else {
               range = range + " - " + " . . . ";
+              var range_mob_end = " . . . "
             }
 
             document.querySelector("#calendar_dates").value = range;
+            document.querySelector("#check_in_mobile").value = range_mob_start;
+            document.querySelector("#check_out_mobile").value = range_mob_end;
             //document.querySelector("#check_in_mobile").value = mobileRangeCheckIn;
             //document.querySelector("#check_out_mobile").value = mobileRangeCheckOut;
             // document.querySelector("#as-date-from").value = this.start.format(this.outputDateFormat);
