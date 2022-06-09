@@ -4679,6 +4679,155 @@ class RoomPage extends \Elementor\Widget_Base
 		require_once(WP_PLUGIN_DIR . '/obpress_plugin_manager/class-analyze-avail.php');
 		require_once(WP_PLUGIN_DIR . '/obpress_plugin_manager/class-analyze-descriptive-infos-response.php');
 
+		$hotelIconAmenities = [
+			1 => [
+				"name"=>"24 hours Front Desk",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/24h.svg"
+			],
+			201 => [
+				"name"=>"Baggage Hold",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/suitcase.svg"
+			],
+			7 => [
+				"name"=>"Bank (Cash Machine)",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/withdraw.svg"
+			],
+			258 => [
+				"name"=>"Handicapped rooms",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/wheelchair.svg"
+			],
+			103 => [
+				"name"=>"Multilingual staff",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/bubble.svg"
+	
+			],
+			97 => [
+				"name"=>"Valet parking available",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/valet.svg"
+			],
+			101 => [
+				"name"=>"Wheelchairs available",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/wheelchair.svg"
+			],
+			50 => [
+				"name"=>"Daily Housekeeping",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/cleaning.svg"
+			],
+			259 => [
+				"name"=>"High Speed Internet Access",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/wifi.svg"
+			],
+			68 => [
+				"name"=>"Parking",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/parking.svg"
+			],
+			44 => [
+				"name"=>"Games Loundge",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/games_loundge.svg"
+	
+			],  
+			42 => [
+				"name"=>"Parking Free",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/parking.svg"
+			],  
+			192 => [
+				"name"=>"Bus Parking",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/school-bus.svg"
+			],  
+			62 => [
+				"name"=>"Bar Club",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/cheers.svg"
+			],
+			76 => [
+				"name"=>"Restaurant",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/dinner.svg"
+			],  
+			72 => [
+				"name"=>"Pools Bar",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/cocktail.svg"
+			],  
+			84 => [
+				"name"=>"SPA",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/spa.svg"
+			],  
+			61 => [
+				"name"=>"Massage",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/massage.svg"
+			],
+			23 => [
+				"name"=>"Fitness center",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/exercise.svg"
+			],
+			66 => [
+				"name"=>"Outdoor Swimming-Pool",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/swimming-pool.svg"
+			],  
+			54 => [
+				"name"=>"Indoor Swimming-Pool",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/swimming-pool.svg"
+			],  
+			202 => [
+				"name"=>"Bike Rental",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/bicycle.svg"
+			],      
+			233 => [
+				"name"=>"Tennis Court",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/tennis.svg"
+			],
+			67 => [
+				"name"=>"Mini-golf",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/golf.svg"
+			],  
+			24 => [
+				"name"=>"Conference Rooms",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/cinema.svg"
+			],  
+			4 => [
+				"name"=>"Auditorium",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/cinema.svg"
+			],
+			33 => [
+				"name"=>"Lift",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/elevator.svg"
+			],
+			8 => [
+				"name"=>"Babysitting",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/babysitting.svg"
+			],  
+			15 => [
+				"name"=>"Car Rental Desk",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/car.svg"
+			],  
+			58 => [
+				"name"=>"Laundry/dry-cleaning valet",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/washing-machine.svg"
+			],  
+			2 => [
+				"name"=>"24-hour Room Service",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/24h.svg"
+			],  
+			71 => [
+				"name"=>"Swimming-Pool",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/swimming-pool.svg"
+			],
+			234 => [
+				"name"=>"Watersports",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/drop.svg"
+			],      
+			53 => [
+				"name"=>"Garage",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/garage.svg"
+			],
+			111 => [
+				"name"=>"Pool table",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/pool_table.svg"
+			],
+			125 => [
+				"name"=>"Kids Club",
+				"url"=>get_template_directory_uri() . "/templates/assets/icons/amenities/playground.svg"
+			]
+		];      
+
 		new Lang_Curr_Functions();
 
 		Lang_Curr_Functions::chainOrHotel($id);

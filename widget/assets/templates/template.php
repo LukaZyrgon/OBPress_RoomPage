@@ -58,6 +58,19 @@
                 </div>
             </div>
 
+            <div class="single-room-image-mobile">
+                <?php if(@$hotels_in_chain[$property]["MaxPartialPaymentParcel"] != null): ?>
+                    <div class="MaxPartialPaymentParcel">
+                    <?php _e('Pay up to', 'OBPress_RoomPage') ?> <span><?= @$hotels_in_chain[$property]["MaxPartialPaymentParcel"] ?>5x</span>
+                    </div>
+                <?php endif; ?>
+                <?php if(isset($room->MultimediaDescriptionsType->MultimediaDescriptions[1]->ImageItemsType->ImageItems[0]->URL->Address)): ?>
+                    <img class="single-room-img" src="<?= $room->MultimediaDescriptionsType->MultimediaDescriptions[1]->ImageItemsType->ImageItems[0]->URL->Address?>" alt="<?= $room->DescriptiveText; ?>">
+                <?php else: ?>
+                    <img class="single-room-img" src="<?= $plugin_directory_path . '/assets/icons/placeholderNewWhite.svg' ?>" alt="promotion">
+                <?php endif; ?>
+            </div>
+
             <div class="single-room-name-holder">
                 <div class="single-room-hotel-name"><?= @$hotels_in_chain[$property]["HotelName"] ?></div>
                 <div class="single-room-name"><?= $room->DescriptiveText ?></div>
@@ -105,7 +118,7 @@
                 }
             ?>
 
-            <div class="single-room-info-categories">
+            <div class="single-room-info-categories desktop">
                 <div class="single-room-info-categories-bars">
                     <span class="single-room-info-categories-bar active-bar" data-category="room-description"><?php _e('Description', 'OBPress_RoomPage') ?></span>
                     <?php if(!empty($amenity_categories)): ?>
@@ -135,6 +148,46 @@
                             <?php foreach($amenity_category as $amenity): ?>
                                 <div><?= $amenity->RoomAmenity ?></div>
                             <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+            <div class="single-room-info-amenities-holder">
+                <p class="single-room-included-msg"><?php _e('Amenities', 'OBPress_RoomPage') ?></p>
+                <div class="single-room-info-amenities">
+                    <?php foreach($descriptive_infos->getAmenitiesByRoomV4($room_id) as $key=>$amenity) : ?>
+                        <?php if($amenity->Image != null) : ?>
+                            <div>
+                                <img src="<?= get_template_directory_uri() ?>/templates/assets/icons/amenities/<?= $amenity->Image; ?>" alt="">
+                                <span><?= $amenity->RoomAmenity; ?></span>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <div class="single-room-info-categories mobile">
+                <div class="single-room-info-category-holder">
+                    <div class="single-room-info-category-title"><?php _e('Description', 'OBPress_RoomPage') ?></div>
+                    <div class="single-room-info-description-holder">
+                        <?= nl2br($room->MultimediaDescriptionsType->MultimediaDescriptions[0]->TextItemsType->TextItems[0]->Description); ?>
+                    </div>
+                    <img class="single-room-info-description-arrow" src="<?= get_template_directory_uri() ?>/templates/assets/icons/arrow_down.svg" alt="">
+                </div>
+                <?php if(!empty($amenity_categories)): ?>
+                    <?php foreach($amenity_categories as $key => $amenity_category): ?>
+                        <div class="single-room-info-category-holder">
+                            <div class="single-room-info-category-title"><?= $key; ?></div>
+                            <div class="single-room-info-description-holder">
+                                <div>
+                                    <?php foreach($amenity_category as $amenity): ?>
+                                        <div>
+                                            <img class="" src="<?= get_template_directory_uri() ?>/templates/assets/icons/check_dark.svg" alt="">
+                                            <?= $amenity->RoomAmenity ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                            <img class="single-room-info-description-arrow" src="<?= get_template_directory_uri() ?>/templates/assets/icons/arrow_down.svg" alt="">
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>

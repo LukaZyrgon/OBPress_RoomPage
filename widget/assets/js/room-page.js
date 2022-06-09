@@ -79,6 +79,16 @@ jQuery(window).on("elementor/frontend/init", function () {
         })
       });
 
+      $('.single-room-info-category-title').on('click', function() {
+        if($(this).closest('.single-room-info-category-holder').find('.single-room-info-description-holder').css('display') == 'none'){
+          $(this).closest('.single-room-info-category-holder').find('.single-room-info-description-holder').slideDown(200);
+          $(this).closest('.single-room-info-category-holder').find('.single-room-info-description-arrow').css('transform', 'rotate(180deg)')
+        }
+        else {
+          $(this).closest('.single-room-info-category-holder').find('.single-room-info-description-holder').slideUp(200);
+          $(this).closest('.single-room-info-category-holder').find('.single-room-info-description-arrow').css('transform', 'rotate(0deg)')
+        }
+      });
 
 
       /* add or update parameters in url */
