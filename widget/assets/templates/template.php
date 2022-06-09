@@ -61,7 +61,7 @@
             <div class="single-room-image-mobile">
                 <?php if(@$hotels_in_chain[$property]["MaxPartialPaymentParcel"] != null): ?>
                     <div class="MaxPartialPaymentParcel">
-                    <?php _e('Pay up to', 'OBPress_RoomPage') ?> <span><?= @$hotels_in_chain[$property]["MaxPartialPaymentParcel"] ?>5x</span>
+                    <?php _e('Pay up to', 'OBPress_RoomPage') ?> <span><?= @$hotels_in_chain[$property]["MaxPartialPaymentParcel"] ?>x</span>
                     </div>
                 <?php endif; ?>
                 <?php if(isset($room->MultimediaDescriptionsType->MultimediaDescriptions[1]->ImageItemsType->ImageItems[0]->URL->Address)): ?>
