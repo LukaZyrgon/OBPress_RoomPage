@@ -135,12 +135,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_image_margin',
 			[
 				'label' => __( 'Image Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '28',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '28',
@@ -154,12 +162,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_partial_payment_padding',
 			[
 				'label' => __( 'Payment Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '11',
+					'right' => '10.85',
+					'bottom' => '10',
+					'left' => '12',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '11',
 					'right' => '10.85',
 					'bottom' => '10',
@@ -263,12 +279,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_partial_room_name_padding',
 			[
 				'label' => __( 'Room Name Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '18.75',
+					'right' => '35',
+					'bottom' => '22.76',
+					'left' => '35',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '18.75',
 					'right' => '35',
 					'bottom' => '22.76',
@@ -417,12 +441,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_info_padding',
 			[
 				'label' => __( 'Info Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '22',
+					'right' => '42',
+					'bottom' => '25',
+					'left' => '26',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '22',
 					'right' => '42',
 					'bottom' => '25',
@@ -516,12 +548,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_message_text_align',
 			[
 				'label' => __( 'Room Message Text Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'left',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_RoomPage' ),
 					'center'  => __( 'Center', 'OBPress_RoomPage' ),
@@ -533,12 +567,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_message_margin',
 			[
 				'label' => __( 'Room Message Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '22.91',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '22.91',
@@ -552,12 +594,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_included_message_margin',
 			[
 				'label' => __( 'Room Included Message Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '44',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '44',
@@ -616,12 +666,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_included_text_margin',
 			[
 				'label' => __( 'Room Included Text Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '40',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '40',
 					'bottom' => '0',
@@ -635,12 +693,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_included_margin',
 			[
 				'label' => __( 'Room Included Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '41.5',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '41.5',
@@ -744,12 +810,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_included_categories_text_margin',
 			[
 				'label' => __( 'Room Included Categories Text Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '40',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '40',
 					'bottom' => '0',
@@ -763,12 +837,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_included_categories_margin',
 			[
 				'label' => __( 'Room Included Categories Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '41.5',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '41.5',
@@ -828,12 +910,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_description_text_align',
 			[
 				'label' => __( 'Room Description Text Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'left',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_RoomPage' ),
 					'center'  => __( 'Center', 'OBPress_RoomPage' ),
@@ -901,12 +985,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_margin',
 			[
 				'label' => __( 'Searchbar Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '20',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '20',
 					'right' => '0',
 					'bottom' => '0',
@@ -920,12 +1012,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_padding',
 			[
 				'label' => __( 'Searchbar Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '30',
+					'bottom' => '0',
+					'left' => '30',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '30',
 					'bottom' => '0',
@@ -939,12 +1039,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_justify_content',
 			[
 				'label' => __( 'Searchbar Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
@@ -959,12 +1061,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_elements_padding',
 			[
 				'label' => __( 'Searchbar Elements Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '20',
+					'right' => '10',
+					'bottom' => '20',
+					'left' => '10',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '20',
 					'right' => '10',
 					'bottom' => '20',
@@ -1077,12 +1187,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_button_padding',
 			[
 				'label' => __( 'Searchbar Button Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '30',
+					'right' => '10',
+					'bottom' => '30',
+					'left' => '10',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '30',
 					'right' => '10',
 					'bottom' => '30',
@@ -1167,12 +1285,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_buutton_border_width',
 			[
 				'label' => __( 'Searchbar Button Border Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 1,
+				],
+				'mobile_default' => [
 					'size' => 1,
 				],
 				'range' => [
@@ -1227,7 +1349,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_buutton_width',
 			[
 				'label' => __( 'Button Width', 'OBPress_RoomPage' ),
@@ -1253,12 +1375,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_buutton_height',
 			[
 				'label' => __( 'Button Height', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 60,
+				],
+				'mobile_default' => [
 					'size' => 60,
 				],
 				'range' => [
@@ -1275,12 +1401,16 @@ class RoomPage extends \Elementor\Widget_Base
 		);
 
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'room_searchbar_buutton_transition',
 			[
 				'label' => __( 'Button Transition Duration', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 0.3,
+				],
+				'mobile_default' => [
 					'size' => 0.3,
 				],
 				'range' => [
@@ -1351,12 +1481,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'relate_rooms_title_margin',
 			[
 				'label' => __( 'Title Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '69.85',
+					'right' => '0',
+					'bottom' => '43.77',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '69.85',
 					'right' => '0',
 					'bottom' => '43.77',
@@ -1370,12 +1508,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'relate_rooms_text_align_title',
 			[
 				'label' => __( 'Title Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'center',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'center',
+				'mobile_default' => 'center',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_RoomPage' ),
 					'center'  => __( 'Center', 'OBPress_RoomPage' ),
@@ -1397,12 +1537,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_width',
 			[
 				'label' => __( 'Cards Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 50,
+				],
+				'mobile_default' => [
 					'size' => 50,
 				],
 				'range' => [
@@ -1432,12 +1576,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_padding',
 			[
 				'label' => __( 'Cards Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '54',
+					'right' => '32',
+					'bottom' => '31',
+					'left' => '32',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '54',
 					'right' => '32',
 					'bottom' => '31',
@@ -1497,12 +1649,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_room_name_text_align',
 			[
 				'label' => __( 'Room Name Text Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'left',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_RoomPage' ),
 					'center'  => __( 'Center', 'OBPress_RoomPage' ),
@@ -1514,12 +1668,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_room_name_margin',
 			[
 				'label' => __( 'Room Name Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '20',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '20',
@@ -1581,12 +1743,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_policy_name_text_align',
 			[
 				'label' => __( 'Policy Text Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'left',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_RoomPage' ),
 					'center'  => __( 'Center', 'OBPress_RoomPage' ),
@@ -1598,12 +1762,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_policy_name_margin',
 			[
 				'label' => __( 'Policy Name Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '15',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '15',
@@ -1662,12 +1834,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_policy_name_margin',
 			[
 				'label' => __( 'Included Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '7',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '7',
 					'right' => '0',
 					'bottom' => '0',
@@ -1720,12 +1900,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_policy_name_dot_margin',
 			[
 				'label' => __( 'Included Dot Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '5',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '5',
 					'bottom' => '0',
@@ -1784,12 +1972,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_full_price_margin',
 			[
 				'label' => __( 'Full Price Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '5',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '5',
@@ -1803,12 +1999,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_full_price_text_align',
 			[
 				'label' => __( 'Full Price Text Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'left',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_RoomPage' ),
 					'center'  => __( 'Center', 'OBPress_RoomPage' ),
@@ -1820,12 +2018,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_room_price_button_justify_content',
 			[
 				'label' => __( 'Price Button Horizontal Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
@@ -1840,12 +2040,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_room_price_button_align_items',
 			[
 				'label' => __( 'Price Button Vertical Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'flex-end',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'flex-end',
+				'mobile_default' => 'flex-end',
 				'options' => [
 					'flex-end'  => __( 'Bottom', 'OBPress_RoomPage' ),
 					'flex-start'  => __( 'Top', 'OBPress_RoomPage' ),
@@ -2002,12 +2204,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_book_btn_padding',
 			[
 				'label' => __( 'Book Button Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '16',
+					'right' => '17',
+					'bottom' => '16',
+					'left' => '16',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '16',
 					'right' => '17',
 					'bottom' => '16',
@@ -2111,12 +2321,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_book_btn_transition',
 			[
 				'label' => __( 'Button Transition Duration', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 0.3,
+				],
+				'mobile_default' => [
 					'size' => 0.3,
 				],
 				'range' => [
@@ -2183,12 +2397,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_number_rooms_padding',
 			[
 				'label' => __( 'Number Rooms Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '5',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '5',
@@ -2202,12 +2424,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_btn_minus_plus_justify_content',
 			[
 				'label' => __( 'Add Remove Buttons Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'flex-start',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'flex-start',
+				'mobile_default' => 'flex-start',
 				'options' => [
 					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 					'center' => __( 'Center', 'OBPress_RoomPage' ),
@@ -2311,12 +2535,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_btn_minus_plus_width',
 			[
 				'label' => __( 'Add Remove Buttons Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 30,
+				],
+				'mobile_default' => [
 					'size' => 30,
 				],
 				'range' => [
@@ -2333,12 +2561,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_selected_rooms_value_width',
 			[
 				'label' => __( 'Selected Rooms Value Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 30,
+				],
+				'mobile_default' => [
 					'size' => 30,
 				],
 				'range' => [
@@ -2355,12 +2587,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_btn_minus_plus_height',
 			[
 				'label' => __( 'Add Remove Buttons Height', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 30,
+				],
+				'mobile_default' => [
 					'size' => 30,
 				],
 				'range' => [
@@ -2377,12 +2613,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_btn_minus_plus_transition',
 			[
 				'label' => __( 'Add Remove Buttons Transition Duration', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 0.3,
+				],
+				'mobile_default' => [
 					'size' => 0.3,
 				],
 				'range' => [
@@ -2485,12 +2725,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_change_search_btn_padding',
 			[
 				'label' => __( 'Change Search Button Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '10',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '10',
 					'right' => '0',
 					'bottom' => '0',
@@ -2530,12 +2778,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_cards_change_search_btn_transition',
 			[
 				'label' => __( 'Change Search Button Transition Duration', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 0.3,
+				],
+				'mobile_default' => [
 					'size' => 0.3,
 				],
 				'range' => [
@@ -2595,12 +2847,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_margin',
 			[
 				'label' => __( 'Error Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '25',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '25',
 					'right' => '0',
 					'bottom' => '0',
@@ -2614,12 +2874,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 		
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_padding',
 			[
 				'label' => __( 'Error Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '20',
+					'bottom' => '0',
+					'left' => '20',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '20',
 					'bottom' => '0',
@@ -2633,12 +2901,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_width',
 			[
 				'label' => __( 'Error Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 20,
+				],
+				'mobile_default' => [
 					'size' => 20,
 				],
 				'range' => [
@@ -2655,12 +2927,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_height',
 			[
 				'label' => __( 'Error Height', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 80,
+				],
+				'mobile_default' => [
 					'size' => 80,
 				],
 				'range' => [
@@ -2690,12 +2966,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_border_radius',
 			[
 				'label' => __( 'Error Border Radius', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '4',
+					'right' => '4',
+					'bottom' => '4',
+					'left' => '4',
+					'isLinked' => true
+				],
+				'mobile_default' => [
 					'top' => '4',
 					'right' => '4',
 					'bottom' => '4',
@@ -2709,12 +2993,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_justify_content',
 			[
 				'label' => __( 'Error Horizontal Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
@@ -2729,12 +3015,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_align_items',
 			[
 				'label' => __( 'Error Vertical Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'center',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'center',
+				'mobile_default' => 'center',
 				'options' => [
 					'center'  => __( 'Center', 'OBPress_RoomPage' ),
 					'flex-end'  => __( 'Bottom', 'OBPress_RoomPage' ),
@@ -2747,12 +3035,16 @@ class RoomPage extends \Elementor\Widget_Base
 		);
 
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_icon_width',
 			[
 				'label' => __( 'Error Icon Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 24,
+				],
+				'mobile_default' => [
 					'size' => 24,
 				],
 				'range' => [
@@ -2769,12 +3061,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_icon_margin',
 			[
 				'label' => __( 'Error Icon Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '15',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '15',
 					'bottom' => '0',
@@ -2919,12 +3219,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_button_hover_transition',
 			[
 				'label' => __( 'Error Button Transition', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 0.3,
+				],
+				'mobile_default' => [
 					'size' => 0.3,
 				],
 				'range' => [
@@ -2941,12 +3245,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_btn_padding',
 			[
 				'label' => __( 'Error Button Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '9',
+					'right' => '20',
+					'bottom' => '9',
+					'left' => '20',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '9',
 					'right' => '20',
 					'bottom' => '9',
@@ -2960,12 +3272,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'releted_rooms_error_btn_width',
 			[
 				'label' => __( 'Error Button Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 115,
+				],
+				'mobile_default' => [
 					'size' => 115,
 				],
 				'range' => [
@@ -2992,7 +3308,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_vertical_position',
 			[
 				'label' => esc_html__( 'Basket Vertical Position', 'OBPress_SpecialOffersPage' ),
@@ -3005,7 +3321,12 @@ class RoomPage extends \Elementor\Widget_Base
 						'step' => 1,
 					],
 				],
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'unit' => 'px',
+					'size' => 265,
+				],
+				'mobile_default' => [
 					'unit' => 'px',
 					'size' => 265,
 				],
@@ -3015,12 +3336,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_margin',
 			[
 				'label' => __( 'Basket Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '25',
+					'right' => '0',
+					'bottom' => '45',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '25',
 					'right' => '0',
 					'bottom' => '45',
@@ -3034,7 +3363,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 		
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_width',
 			[
 				'label' => esc_html__( 'Basket Width', 'OBPress_SpecialOffersPage' ),
@@ -3047,7 +3376,12 @@ class RoomPage extends \Elementor\Widget_Base
 						'step' => 1,
 					],
 				],
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'unit' => 'px',
+					'size' => 336,
+				],
+				'mobile_default' => [
 					'unit' => 'px',
 					'size' => 336,
 				],
@@ -3115,12 +3449,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_info_padding',
 			[
 				'label' => __( 'Basket Info Padding', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '17',
+					'right' => '0',
+					'bottom' => '14',
+					'left' => '25',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '17',
 					'right' => '0',
 					'bottom' => '14',
@@ -3148,12 +3490,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_hotel_stars_justify_content',
 			[
 				'label' => __( 'Basket Hotel Stars Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'flex-start',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'flex-start',
+				'mobile_default' => 'flex-start',
 				'options' => [
 					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
 					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
@@ -3165,12 +3509,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_hotel_stars_margin',
 			[
 				'label' => __( 'Basket Hotel Stars Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '7',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '7',
@@ -3184,7 +3536,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_hotel_stars_width',
 			[
 				'label' => esc_html__( 'Basket Hotel Stars Width', 'OBPress_SpecialOffersPage' ),
@@ -3197,7 +3549,12 @@ class RoomPage extends \Elementor\Widget_Base
 						'step' => 1,
 					],
 				],
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'unit' => 'px',
+					'size' => 14,
+				],
+				'mobile_default' => [
 					'unit' => 'px',
 					'size' => 14,
 				],
@@ -3207,7 +3564,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_hotel_stars_height',
 			[
 				'label' => esc_html__( 'Basket Hotel Stars Height', 'OBPress_SpecialOffersPage' ),
@@ -3220,7 +3577,12 @@ class RoomPage extends \Elementor\Widget_Base
 						'step' => 1,
 					],
 				],
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'unit' => 'px',
+					'size' => 14,
+				],
+				'mobile_default' => [
 					'unit' => 'px',
 					'size' => 14,
 				],
@@ -3230,12 +3592,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_hotel_name_margin',
 			[
 				'label' => __( 'Basket Hotel Name Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '19',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '19',
@@ -3295,12 +3665,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_hotel_name_align_title',
 			[
 				'label' => __( 'Basket Hotel Name Align', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'left',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_SpecialOffersPage' ),
 					'center'  => __( 'Center', 'OBPress_SpecialOffersPage' ),
@@ -3312,12 +3684,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_stay_info_justify_content',
 			[
 				'label' => __( 'Basket Stay Info Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'flex-start',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'flex-start',
+				'mobile_default' => 'flex-start',
 				'options' => [
 					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
 					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
@@ -3355,12 +3729,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_stay_dates_margin',
 			[
 				'label' => __( 'Basket Stay Dates Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '8',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '8',
 					'bottom' => '0',
@@ -3423,12 +3805,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_stay_info_title_margin',
 			[
 				'label' => __( 'Basket Stay Info Title Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '4',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '4',
@@ -3505,7 +3895,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_stay_info_arrow_width',
 			[
 				'label' => esc_html__( 'Basket Stay Info Arrow Width', 'OBPress_SpecialOffersPage' ),
@@ -3518,7 +3908,12 @@ class RoomPage extends \Elementor\Widget_Base
 						'step' => 1,
 					],
 				],
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'unit' => 'px',
+					'size' => 10,
+				],
+				'mobile_default' => [
 					'unit' => 'px',
 					'size' => 10,
 				],
@@ -3529,7 +3924,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_stay_info_arrow_height',
 			[
 				'label' => esc_html__( 'Basket Stay Info Arrow Height', 'OBPress_SpecialOffersPage' ),
@@ -3542,7 +3937,12 @@ class RoomPage extends \Elementor\Widget_Base
 						'step' => 1,
 					],
 				],
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'unit' => 'px',
+					'size' => 10,
+				],
+				'mobile_default' => [
 					'unit' => 'px',
 					'size' => 10,
 				],
@@ -3553,12 +3953,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_stay_info_arrow_margin',
 			[
 				'label' => __( 'Basket Stay Info Arrow Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '8',
+					'bottom' => '0',
+					'left' => '8',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '8',
 					'bottom' => '0',
@@ -3618,12 +4026,14 @@ class RoomPage extends \Elementor\Widget_Base
 		);
 
 		
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_stay_info_values_text_align',
 			[
 				'label' => __( 'Basket Stay Info Values Text Align', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'left',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'options' => [
 					'left'  => __( 'Left', 'OBPress_SpecialOffersPage' ),
 					'center'  => __( 'Center', 'OBPress_SpecialOffersPage' ),
@@ -3645,12 +4055,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_info_margin',
 			[
 				'label' => __( 'Basket Room Info Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '10',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '10',
 					'right' => '0',
 					'bottom' => '0',
@@ -3690,12 +4108,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_info_padding',
 			[
 				'label' => __( 'Basket Room Info Padding', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '20',
+					'right' => '31',
+					'bottom' => '19',
+					'left' => '26',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '20',
 					'right' => '31',
 					'bottom' => '19',
@@ -3709,12 +4135,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_info_justify_content',
 			[
 				'label' => __( 'Basket Room Info Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
@@ -3729,12 +4157,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_title_price_margin',
 			[
 				'label' => __( 'Basket Room Title Price Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '14',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '14',
@@ -3889,12 +4325,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_info_policy_justify_content',
 			[
 				'label' => __( 'Basket Room Policy Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
@@ -3909,12 +4347,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_info_policy_padding',
 			[
 				'label' => __( 'Basket Room Policy Padding', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '15',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '15',
@@ -4024,12 +4470,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_info_policy_justify_content',
 			[
 				'label' => __( 'Basket Room Policy Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
@@ -4044,12 +4492,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_discount_padding',
 			[
 				'label' => __( 'Basket Room Discount Padding', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '10',
+					'right' => '0',
+					'bottom' => '10',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '10',
 					'right' => '0',
 					'bottom' => '10',
@@ -4134,12 +4590,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_tax_padding',
 			[
 				'label' => __( 'Basket Room Tax Padding', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '12',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '12',
 					'right' => '0',
 					'bottom' => '0',
@@ -4153,12 +4617,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_tax_justify_content',
 			[
 				'label' => __( 'Basket Room Tax Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'flex-start',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'flex-start',
+				'mobile_default' => 'flex-start',
 				'options' => [
 					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
 					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
@@ -4173,12 +4639,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_tax_title_margin',
 			[
 				'label' => __( 'Basket Room Tax Title Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '8',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '8',
@@ -4237,12 +4711,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_tax_icon_width',
 			[
 				'label' => __( 'Basket Room Tax Icon Width', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 15,
+				],
+				'mobile_default' => [
 					'size' => 15,
 				],
 				'range' => [
@@ -4258,12 +4736,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_tax_icon_height',
 			[
 				'label' => __( 'Basket Room Tax Icon Height', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 15,
+				],
+				'mobile_default' => [
 					'size' => 15,
 				],
 				'range' => [
@@ -4279,12 +4761,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_room_tax_results_justify_content',
 			[
 				'label' => __( 'Basket Room Tax Results Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
@@ -4418,12 +4902,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_total_price_padding',
 			[
 				'label' => __( 'Basket Total Price Padding', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '8',
+					'right' => '31',
+					'bottom' => '22',
+					'left' => '26',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '8',
 					'right' => '31',
 					'bottom' => '22',
@@ -4437,12 +4929,14 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 		
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_total_price_justify_content',
 			[
 				'label' => __( 'Basket Total Price Justify Content', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
 					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
@@ -4547,12 +5041,20 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_button_margin',
 			[
 				'label' => __( 'Basket Button Margin', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '15',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '15',
 					'right' => '0',
 					'bottom' => '0',
@@ -4618,12 +5120,16 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_button_transition',
 			[
 				'label' => __( 'Basket Button Transition Duration', 'OBPress_SpecialOffersPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 0.3,
+				],
+				'mobile_default' => [
 					'size' => 0.3,
 				],
 				'range' => [
@@ -4639,7 +5145,7 @@ class RoomPage extends \Elementor\Widget_Base
 			]
 		);
 		
-		$this->add_control(
+		$this->add_responsive_control(
 			'basket_button_height',
 			[
 				'label' => esc_html__( 'Basket Button Height', 'OBPress_SpecialOffersPage' ),
@@ -4652,7 +5158,12 @@ class RoomPage extends \Elementor\Widget_Base
 						'step' => 1,
 					],
 				],
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'unit' => 'px',
+					'size' => 40,
+				],
+				'mobile_default' => [
 					'unit' => 'px',
 					'size' => 40,
 				],
