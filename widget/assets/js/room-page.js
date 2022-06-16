@@ -84,6 +84,9 @@ jQuery(window).on("elementor/frontend/init", function () {
           $(".next-step-loader").hide();
           $("#room-results").html(res);
 
+          //change url in browser 
+          window.history.pushState( "", "Title", url_no_parametres + "?room_id="+ room_id + "&" + $( $(".room-form")[0].elements ).not("#chain_code, #hotel_code").serialize()  );
+
         })
       });
 

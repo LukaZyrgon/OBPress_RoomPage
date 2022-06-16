@@ -13,7 +13,11 @@
 		$AllRoomRatesLOS_Restricted = $data->getRoomRatesByRoomAvailability($property, $room_id, ['LOS_Restricted']);
 	}
 
-	$AllRoomRates = array_merge($AllRoomRatesAvailableForSale, $AllRoomRatesLOS_Restricted);
+    if ($AllRoomRatesAvailableForSale != null && $AllRoomRatesLOS_Restricted != null ) {
+          $AllRoomRates = array_merge($AllRoomRatesAvailableForSale, $AllRoomRatesLOS_Restricted);
+    }
+
+
 	$availableRooms =  count( $AllRoomRates );
 	
 	foreach($AllRoomRates as $RoomRate) {
@@ -58,7 +62,7 @@
 
 			?>
 
-			<?php if ($data->getRoomRatesByRoomAvailability($property, $room_id, ["AvailableForSale"]) !== null): ?>
+			<?php if ($data->getRoomRatesByRoomAvailability($property, $room_id, ["AvailableForSale"]) != null): ?>
 				<?php foreach ($data->getRoomRatesByRoomAvailability($property, $room_id, ["AvailableForSale"]) as $key => $roomrate): ?>
 					<?php 
 						if ($descriptive_infos->getAmenitiesByRoomV4($room_id) !== null) {
@@ -205,7 +209,7 @@
 			<?php endif; ?>
 
 			
-			<?php if ($data->getRoomRatesByRoomAvailability($property, $room_id, ["LOS_Restricted"]) !== null): ?>
+			<?php if ($data->getRoomRatesByRoomAvailability($property, $room_id, ["LOS_Restricted"]) != null): ?>
 				<?php foreach ($data->getRoomRatesByRoomAvailability($property, $room_id, ["LOS_Restricted"]) as $key => $roomrate): ?>
 
 					<?php 
