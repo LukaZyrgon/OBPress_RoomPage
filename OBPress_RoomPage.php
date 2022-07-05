@@ -15,6 +15,11 @@ if(get_option('obpress_api_set') == true){
     require_once('elementor/init.php');
 }
 
+add_action( 'init', 'obpress_roompage_load_textdomain' );
+ 
+function obpress_roompage_load_textdomain() {
+    load_plugin_textdomain( 'OBPress_RoomPage', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+}
 
 //register ajax calls
 require_once(WP_PLUGIN_DIR . '/OBPress_RoomPage/ajax/room-ajax.php');

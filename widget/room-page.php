@@ -3303,7 +3303,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'basket_section',
 			[
-				'label' => __('Basket Style', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Style', 'OBPress_RoomPage'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -3311,7 +3311,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_vertical_position',
 			[
-				'label' => esc_html__( 'Basket Vertical Position', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Vertical Position', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -3339,7 +3339,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_margin',
 			[
-				'label' => __( 'Basket Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -3366,7 +3366,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_width',
 			[
-				'label' => esc_html__( 'Basket Width', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -3394,7 +3394,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_background_color',
 			[
-				'label' => __('Baket Background Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Baket Background Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#fff',
@@ -3408,7 +3408,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'basket_box_shadow',
-				'label' => esc_html__( 'Basket Box Shadow', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Box Shadow', 'OBPress_RoomPage' ),
 				'selector' => '.single-room .obpress-hotel-results-basket',
 				'fields_options' => [
 					'box_shadow_type' => [ 
@@ -3429,7 +3429,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_hotel_result_background_color',
 			[
-				'label' => __('Baket Hotel Result Background Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Baket Hotel Result Background Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#F9F9F9',
@@ -3444,7 +3444,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'basket_info_section',
 			[
-				'label' => __('Basket Info Style', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Info Style', 'OBPress_RoomPage'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -3452,7 +3452,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_info_padding',
 			[
-				'label' => __( 'Basket Info Padding', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Info Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -3479,7 +3479,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_hotel_stars_color',
 			[
-				'label' => __('Baket Hotel Result Background Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Baket Hotel Result Background Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#ffc70e',
@@ -3493,15 +3493,15 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_hotel_stars_justify_content',
 			[
-				'label' => __( 'Basket Hotel Stars Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Hotel Stars Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'flex-start',
 				'mobile_default' => 'flex-start',
 				'options' => [
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-stars-holder' => 'justify-content: {{basket_hotel_stars_justify_content}}'
@@ -3512,7 +3512,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_hotel_stars_margin',
 			[
-				'label' => __( 'Basket Hotel Stars Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Hotel Stars Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -3539,7 +3539,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_hotel_stars_width',
 			[
-				'label' => esc_html__( 'Basket Hotel Stars Width', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Hotel Stars Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -3567,7 +3567,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_hotel_stars_height',
 			[
-				'label' => esc_html__( 'Basket Hotel Stars Height', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Hotel Stars Height', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -3595,7 +3595,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_hotel_name_margin',
 			[
-				'label' => __( 'Basket Hotel Name Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Hotel Name Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -3622,7 +3622,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_hotel_name_color',
 			[
-				'label' => __('Baket Hotel Name Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Baket Hotel Name Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -3636,7 +3636,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_hotel_name_typography',
-				'label' => __('Basket Hotel Name Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Hotel Name Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-basket-title',
 				'fields_options' => [
 					'typography' => [
@@ -3668,15 +3668,15 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_hotel_name_align_title',
 			[
-				'label' => __( 'Basket Hotel Name Align', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Hotel Name Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'left',
 				'mobile_default' => 'left',
 				'options' => [
-					'left'  => __( 'Left', 'OBPress_SpecialOffersPage' ),
-					'center'  => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'right'  => __( 'Right', 'OBPress_SpecialOffersPage' ),
+					'left'  => __( 'Left', 'OBPress_RoomPage' ),
+					'center'  => __( 'Center', 'OBPress_RoomPage' ),
+					'right'  => __( 'Right', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-basket-title' => 'text-align: {{basket_hotel_name_align_title}}'
@@ -3687,15 +3687,15 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_stay_info_justify_content',
 			[
-				'label' => __( 'Basket Stay Info Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Stay Info Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'flex-start',
 				'mobile_default' => 'flex-start',
 				'options' => [
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-basket-stay-info' => 'justify-content: {{basket_stay_info_justify_content}}'
@@ -3707,7 +3707,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Border::get_type(),
 			[
 				'name' => 'basket_stay_dates_border',
-				'label' => __( 'Basket Stay Dates Border', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Stay Dates Border', 'OBPress_RoomPage' ),
 				'fields_options' => [
 					'border' => [
 						'default' => 'solid',
@@ -3732,7 +3732,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_stay_dates_margin',
 			[
-				'label' => __( 'Basket Stay Dates Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Stay Dates Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -3759,7 +3759,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_stay_info_title_color',
 			[
-				'label' => __('Basket Stay Info Title Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Stay Info Title Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#2c2f33',
@@ -3777,7 +3777,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_stay_info_title_typography',
-				'label' => __('Basket Stay Info Title Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Stay Info Title Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-basket-stay-checkin-string, .single-room .obpress-hotel-basket-stay-checkout-string, .single-room .obpress-hotel-basket-stay-rooms-string, .single-room .obpress-hotel-basket-stay-nights-string, .single-room .obpress-hotel-basket-stay-guests-string',
 				'fields_options' => [
 					'typography' => [
@@ -3808,7 +3808,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_stay_info_title_margin',
 			[
-				'label' => __( 'Basket Stay Info Title Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Stay Info Title Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -3839,7 +3839,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_stay_info_date_color',
 			[
-				'label' => __('Basket Stay Info Date Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Stay Info Date Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -3853,7 +3853,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_stay_info_date_typography',
-				'label' => __('Basket Stay Info Date Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Stay Info Date Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-basket-stay-checkin-date, .single-room .obpress-hotel-basket-stay-checkout-date',
 				'fields_options' => [
 					'typography' => [
@@ -3884,7 +3884,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_stay_info_arrow_color',
 			[
-				'label' => __('Basket Stay Info Arrow Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Stay Info Arrow Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -3898,7 +3898,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_stay_info_arrow_width',
 			[
-				'label' => esc_html__( 'Basket Stay Info Arrow Width', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Stay Info Arrow Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -3927,7 +3927,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_stay_info_arrow_height',
 			[
-				'label' => esc_html__( 'Basket Stay Info Arrow Height', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Stay Info Arrow Height', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -3956,7 +3956,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_stay_info_arrow_margin',
 			[
-				'label' => __( 'Basket Stay Info Arrow Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Stay Info Arrow Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -3983,7 +3983,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_stay_info_values_color',
 			[
-				'label' => __('Basket Stay Info Values Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Stay Info Values Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -3997,7 +3997,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_stay_info_values_typography',
-				'label' => __('Basket Stay Info Values Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Stay Info Values Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-basket-stay-rooms-num, .single-room .obpress-hotel-basket-stay-nights-num, .single-room .obpress-hotel-basket-stay-guests-num',
 				'fields_options' => [
 					'typography' => [
@@ -4029,15 +4029,15 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_stay_info_values_text_align',
 			[
-				'label' => __( 'Basket Stay Info Values Text Align', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Stay Info Values Text Align', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'left',
 				'mobile_default' => 'left',
 				'options' => [
-					'left'  => __( 'Left', 'OBPress_SpecialOffersPage' ),
-					'center'  => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'right'  => __( 'Right', 'OBPress_SpecialOffersPage' ),
+					'left'  => __( 'Left', 'OBPress_RoomPage' ),
+					'center'  => __( 'Center', 'OBPress_RoomPage' ),
+					'right'  => __( 'Right', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-basket-stay-rooms-num, .single-room .obpress-hotel-basket-stay-nights-num, .single-room .obpress-hotel-basket-stay-guests-num' => 'text-align: {{basket_stay_info_values_text_align}}'
@@ -4050,7 +4050,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'basket_room_info_section',
 			[
-				'label' => __('Basket Room Styles', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Styles', 'OBPress_RoomPage'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -4058,7 +4058,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_info_margin',
 			[
-				'label' => __( 'Basket Room Info Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Info Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4086,7 +4086,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Border::get_type(),
 			[
 				'name' => 'basket_room_info_border',
-				'label' => __( 'Basket Room Info Border', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Info Border', 'OBPress_RoomPage' ),
 				'fields_options' => [
 					'border' => [
 						'default' => 'solid',
@@ -4111,7 +4111,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_info_padding',
 			[
-				'label' => __( 'Basket Room Info Padding', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Info Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4138,18 +4138,18 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_info_justify_content',
 			[
-				'label' => __( 'Basket Room Info Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Info Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'space-between',
 				'mobile_default' => 'space-between',
 				'options' => [
-					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
-					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
-					'space-evenly'  => __( 'Space Evenly', 'OBPress_SpecialOffersPage' ),
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
+					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
+					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
+					'space-evenly'  => __( 'Space Evenly', 'OBPress_RoomPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-results-item-title-price' => 'justify-content: {{basket_room_info_justify_content}}'
@@ -4160,7 +4160,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_title_price_margin',
 			[
-				'label' => __( 'Basket Room Title Price Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Title Price Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4187,7 +4187,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_room_info_name_color',
 			[
-				'label' => __('Basket Room Info Name Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Info Name Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -4201,7 +4201,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_info_name_typography',
-				'label' => __('Basket Room Info Name Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Info Name Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-item-title',
 				'fields_options' => [
 					'typography' => [
@@ -4233,7 +4233,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_info_quantity_typography',
-				'label' => __('Basket Room Info Quantity Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Info Quantity Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-total-room-selected',
 				'fields_options' => [
 					'typography' => [
@@ -4265,7 +4265,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_info_price_typography',
-				'label' => __('Basket Room Info Price Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Info Price Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-item-price',
 				'fields_options' => [
 					'typography' => [
@@ -4297,7 +4297,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_info_currency_typography',
-				'label' => __('Basket Room Info Currency Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Info Currency Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-item-curr',
 				'fields_options' => [
 					'typography' => [
@@ -4328,18 +4328,18 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_info_policy_justify_content',
 			[
-				'label' => __( 'Basket Room Policy Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Policy Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'space-between',
 				'mobile_default' => 'space-between',
 				'options' => [
-					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
-					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
-					'space-evenly'  => __( 'Space Evenly', 'OBPress_SpecialOffersPage' ),
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
+					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
+					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
+					'space-evenly'  => __( 'Space Evenly', 'OBPress_RoomPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-results-item-promo-edit' => 'justify-content: {{basket_room_info_justify_content}}'
@@ -4350,7 +4350,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_info_policy_padding',
 			[
-				'label' => __( 'Basket Room Policy Padding', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Policy Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4377,7 +4377,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_room_info_policy_name_color',
 			[
-				'label' => __('Basket Room Info Policy Name Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Info Policy Name Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#82B789',
@@ -4391,7 +4391,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_info_policy_name_typography',
-				'label' => __('Basket Room Info Policy Name Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Info Policy Name Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-item-promo',
 				'fields_options' => [
 					'typography' => [
@@ -4425,7 +4425,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_room_remover_color',
 			[
-				'label' => __('Basket Room Remover Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Remover Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#4B8CF4',
@@ -4439,7 +4439,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_remover_typography',
-				'label' => __('Basket Room Remover Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Remover Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-item-edit',
 				'fields_options' => [
 					'typography' => [
@@ -4473,18 +4473,18 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_info_policy_justify_content',
 			[
-				'label' => __( 'Basket Room Policy Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Policy Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'space-between',
 				'mobile_default' => 'space-between',
 				'options' => [
-					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
-					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
-					'space-evenly'  => __( 'Space Evenly', 'OBPress_SpecialOffersPage' ),
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
+					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
+					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
+					'space-evenly'  => __( 'Space Evenly', 'OBPress_RoomPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-results-item-promo-edit' => 'justify-content: {{basket_room_info_justify_content}}'
@@ -4495,7 +4495,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_discount_padding',
 			[
-				'label' => __( 'Basket Room Discount Padding', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Discount Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4522,7 +4522,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_room_discount_color',
 			[
-				'label' => __('Basket Room Discount Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Discount Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -4536,7 +4536,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_discount_typography',
-				'label' => __('Basket Room Discount Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Discount Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-discount-message, .single-room .obpress-hotel-results-discount-currency, .single-room .obpress-hotel-results-discount-price',
 				'fields_options' => [
 					'typography' => [
@@ -4568,7 +4568,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Border::get_type(),
 			[
 				'name' => 'basket_room_discount_border',
-				'label' => __( 'Basket Room Discount Border', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Discount Border', 'OBPress_RoomPage' ),
 				'fields_options' => [
 					'border' => [
 						'default' => 'solid',
@@ -4593,7 +4593,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_tax_padding',
 			[
-				'label' => __( 'Basket Room Tax Padding', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Tax Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4620,18 +4620,18 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_tax_justify_content',
 			[
-				'label' => __( 'Basket Room Tax Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Tax Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'flex-start',
 				'mobile_default' => 'flex-start',
 				'options' => [
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
-					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
-					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
-					'space-evenly'  => __( 'Space Evenly', 'OBPress_SpecialOffersPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
+					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
+					'space-evenly'  => __( 'Space Evenly', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-results-tax-title' => 'justify-content: {{basket_room_tax_justify_content}}'
@@ -4642,7 +4642,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_tax_title_margin',
 			[
-				'label' => __( 'Basket Room Tax Title Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Tax Title Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4669,7 +4669,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_room_tax_title_color',
 			[
-				'label' => __('Basket Room Tax Title Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Tax Title Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -4683,7 +4683,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_tax_title_typography',
-				'label' => __('Basket Room Tax Title Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Tax Title Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-tax-title',
 				'fields_options' => [
 					'typography' => [
@@ -4714,7 +4714,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_tax_icon_width',
 			[
-				'label' => __( 'Basket Room Tax Icon Width', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Tax Icon Width', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4739,7 +4739,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_tax_icon_height',
 			[
-				'label' => __( 'Basket Room Tax Icon Height', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Tax Icon Height', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4764,18 +4764,18 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_room_tax_results_justify_content',
 			[
-				'label' => __( 'Basket Room Tax Results Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Room Tax Results Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'space-between',
 				'mobile_default' => 'space-between',
 				'options' => [
-					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
-					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
-					'space-evenly'  => __( 'Space Evenly', 'OBPress_SpecialOffersPage' ),
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
+					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
+					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
+					'space-evenly'  => __( 'Space Evenly', 'OBPress_RoomPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-results-tax-bottom' => 'justify-content: {{basket_room_tax_results_justify_content}}'
@@ -4786,7 +4786,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_room_tax_message_color',
 			[
-				'label' => __('Basket Room Tax Message Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Tax Message Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -4800,7 +4800,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_tax_message_typography',
-				'label' => __('Basket Room Tax Message Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Tax Message Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-tax-message',
 				'fields_options' => [
 					'typography' => [
@@ -4832,7 +4832,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_tax_price_typography',
-				'label' => __('Basket Room Tax Price Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Tax Price Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-tax-total',
 				'fields_options' => [
 					'typography' => [
@@ -4864,7 +4864,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_room_tax_currency_typography',
-				'label' => __('Basket Room Tax Currency Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Room Tax Currency Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-results-tax-currency',
 				'fields_options' => [
 					'typography' => [
@@ -4897,7 +4897,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->start_controls_section(
 			'basket_total_price_section',
 			[
-				'label' => __('Basket Total Price Styles', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Total Price Styles', 'OBPress_RoomPage'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -4905,7 +4905,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_total_price_padding',
 			[
-				'label' => __( 'Basket Total Price Padding', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Total Price Padding', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -4932,18 +4932,18 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_total_price_justify_content',
 			[
-				'label' => __( 'Basket Total Price Justify Content', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Total Price Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => 'space-between',
 				'mobile_default' => 'space-between',
 				'options' => [
-					'space-between'  => __( 'Space Between', 'OBPress_SpecialOffersPage' ),
-					'space-around'  => __( 'Space Around', 'OBPress_SpecialOffersPage' ),
-					'space-evenly'  => __( 'Space Evenly', 'OBPress_SpecialOffersPage' ),
-					'center' => __( 'Center', 'OBPress_SpecialOffersPage' ),
-					'flex-end'  => __( 'Flex End', 'OBPress_SpecialOffersPage' ),
-					'flex-start'  => __( 'Flex Start', 'OBPress_SpecialOffersPage' ),
+					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' ),
+					'space-around'  => __( 'Space Around', 'OBPress_RoomPage' ),
+					'space-evenly'  => __( 'Space Evenly', 'OBPress_RoomPage' ),
+					'center' => __( 'Center', 'OBPress_RoomPage' ),
+					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-total-price-holder' => 'justify-content: {{basket_total_price_justify_content}}'
@@ -4954,7 +4954,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_total_title_color',
 			[
-				'label' => __('Basket Total Title Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Total Title Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#000',
@@ -4968,7 +4968,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_total_title_typography',
-				'label' => __('Basket Total Title Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Total Title Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-total-price-string',
 				'fields_options' => [
 					'typography' => [
@@ -4999,7 +4999,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_total_price_color',
 			[
-				'label' => __('Basket Total Price Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Total Price Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#82B789',
@@ -5013,7 +5013,7 @@ class RoomPage extends \Elementor\Widget_Base
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'basket_total_price_typography',
-				'label' => __('Basket Total Price Typography', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Total Price Typography', 'OBPress_RoomPage'),
 				'selector' => '.single-room .obpress-hotel-total-price',
 				'fields_options' => [
 					'typography' => [
@@ -5044,7 +5044,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_button_margin',
 			[
-				'label' => __( 'Basket Button Margin', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Button Margin', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -5071,7 +5071,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_button_bg_color',
 			[
-				'label' => __('Basket Button Backgournd Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Button Backgournd Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#82B789',
@@ -5084,7 +5084,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_button_color',
 			[
-				'label' => __('Basket Button Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Button Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#fff',
@@ -5097,7 +5097,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_button_bg_hover_color',
 			[
-				'label' => __('Basket Button Hover Backgournd Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Button Hover Backgournd Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#82B789',
@@ -5110,7 +5110,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_control(
 			'basket_button_hover_color',
 			[
-				'label' => __('Basket Button Hover Color', 'OBPress_SpecialOffersPage'),
+				'label' => __('Basket Button Hover Color', 'OBPress_RoomPage'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
 				'default' => '#fff',
@@ -5123,7 +5123,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_button_transition',
 			[
-				'label' => __( 'Basket Button Transition Duration', 'OBPress_SpecialOffersPage' ),
+				'label' => __( 'Basket Button Transition Duration', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
@@ -5148,7 +5148,7 @@ class RoomPage extends \Elementor\Widget_Base
 		$this->add_responsive_control(
 			'basket_button_height',
 			[
-				'label' => esc_html__( 'Basket Button Height', 'OBPress_SpecialOffersPage' ),
+				'label' => esc_html__( 'Basket Button Height', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [

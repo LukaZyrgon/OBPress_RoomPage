@@ -451,13 +451,13 @@
                     </div>
                     <div class="ob-mobile-weekdays">
                         <div>
-                            <span><?php _e('sun', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('mon', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('tue', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('wed', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('thu', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('fri', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('sat', 'OBPress_SpecialOffersPage') ?></span>
+                            <span><?php _e('sun', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('mon', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('tue', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('wed', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('thu', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('fri', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('sat', 'OBPress_RoomPage') ?></span>
                         </div>
                     </div>
                 </div>
@@ -528,7 +528,7 @@
 
 		<div class="single-room-img-holder">
             <div class="MaxPartialPaymentParcel" data-toggle="modal" data-target="#partial-modal-payment">
-                Pay up to <span>10x</span>
+                <?php _e('Pay up to', 'OBPress_RoomPage'); ?> <span>10x</span>
             </div>
 
 
@@ -543,60 +543,55 @@
             </div>
 
             <div class="single-room-name-holder">
-    	        <div class="single-room-hotel-name">Hilton Rio de Janeiro Copacabana</div>
-                <div class="single-room-name">Spring Season</div>
+    	        <div class="single-room-hotel-name"><?php _e('Hilton Rio de Janeiro Copacabana', 'OBPress_RoomPage'); ?></div>
+                <div class="single-room-name"><?php _e('Spring Season', 'OBPress_RoomPage'); ?></div>
             </div>
 
 		</div>
 
 		<div class="single-room-info-holder">
 
-        	<p class="single-room-included-msg">Esse pacote especial oferece:</p>
+        	<p class="single-room-included-msg"><?php _e('This special package offers:', 'OBPress_RoomPage'); ?></p>
         	<div class="single-room-included-holder">
-                <span class="single-room-included">Free wifi all hotel</span>
-                <span class="single-room-included">Bike Rental</span>
-                <span class="single-room-included">Shopping nearby</span>
-                <span class="single-room-included">Free wifi all hotel</span>
-                <span class="single-room-included">Free Coffee</span>
-                <span class="single-room-included">24 Hour reception</span>
-                <span class="single-room-included">Great little-lunch</span>
+                <span class="single-room-included"><?php _e('Free wifi all hotel', 'OBPress_RoomPage'); ?></span>
+                <span class="single-room-included"><?php _e('Bike Rental', 'OBPress_RoomPage'); ?></span>
+                <span class="single-room-included"><?php _e('Shopping nearby', 'OBPress_RoomPage'); ?></span>
+                <span class="single-room-included"><?php _e('Free wifi all hotel', 'OBPress_RoomPage'); ?></span>
+                <span class="single-room-included"><?php _e('Free Coffee', 'OBPress_RoomPage'); ?></span>
+                <span class="single-room-included"><?php _e('24 Hour reception', 'OBPress_RoomPage'); ?></span>
+                <span class="single-room-included"><?php _e('Great little-lunch', 'OBPress_RoomPage'); ?></span>
             </div>
-
-
-
 
             <div class="single-room-info-categories">
             	<div class="single-room-info-categories-bars">
-            		<span class="single-room-info-categories-bar active-bar" data-category="room-description">Descrição</span>
-            		<span class="single-room-info-categories-bar" data-category="Serviços Gerais">Serviços Gerais</span>
-            		<span class="single-room-info-categories-bar" data-category="Restaurantes e Bares">Restaurantes e Bares</span>
-            		<span class="single-room-info-categories-bar" data-category="Bem-estar e Desporto">Bem-estar e Desporto</span>
-            		<span class="single-room-info-categories-bar" data-category="Produtos de casa e banho">Produtos de casa e banho</span>
-            		<span class="single-room-info-categories-bar" data-category="Atrações">Atrações</span>
+            		<span class="single-room-info-categories-bar active-bar" data-category="room-description"><?php _e('Description', 'OBPress_RoomPage'); ?></span>
+            		<span class="single-room-info-categories-bar" data-category="Serviços Gerais"><?php _e('General Services', 'OBPress_RoomPage'); ?></span>
+            		<span class="single-room-info-categories-bar" data-category="Restaurantes e Bares"><?php _e('Restaurants and Bars', 'OBPress_RoomPage'); ?></span>
+            		<span class="single-room-info-categories-bar" data-category="Bem-estar e Desporto"><?php _e('Wellness and Sport', 'OBPress_RoomPage'); ?></span>
+            		<span class="single-room-info-categories-bar" data-category="Produtos de casa e banho"><?php _e('Home and bath products', 'OBPress_RoomPage'); ?></span>
+            		<span class="single-room-info-categories-bar" data-category="Atrações"><?php _e('Attractions', 'OBPress_RoomPage'); ?></span>
             	</div>
 
             	<div class="single-room-info-category-section active-section" data-category="room-description">
             		<span class="room-description-short">
-            			<?= nl2br("O Hilton Copacabana Rio De Janeiro, De 5 Estrelas, Está Idealmente Localizado Em Frente Às Águas Azuis Da Praia De Copacabana. Disponibiliza Um Spa Elegante E Uma Piscina No Último Piso, Ambos Com Vistas Mar Magníficas.
+                        <?php _e(nl2br('The 5-Star Hilton Copacabana Rio De Janeiro Is Ideally Located Opposite The Blue Waters Of Copacabana Beach. It Offers An Elegant Spa And A Rooftop Pool, Both With Magnificent Sea Views.
 
-            			O Hilton Copacabana Rio De Janeiro Possui Quartos Luminosos E Sofisticados Com Ar Condicionado, Uma Televisão E Um Minibar. Todos Os Quartos Apresentam Um Estilo Elegante Com Mobiliário Em Madeira, Uma Decoração Contemporânea E Acolhedores Tons Naturais. A Maioria Dos Quartos Oferece Vistas Fantásticas Para O Oceano.") ?>
-            			
-            				<span>...</span>
+                        The Hilton Copacabana Rio De Janeiro Features Bright And Sophisticated Rooms With Air Conditioning, A Television And A Minibar. All Guestrooms Feature An Elegant Style With Wood Furnishings, Contemporary Decor And Warm Natural Tones. Most Guestrooms Offer Fantastic Ocean Views.'), 'OBPress_RoomPage'); ?><span>...</span>
             		</span>
                 	<span class="room-description-long">
-						<?= nl2br("O Hilton Copacabana Rio De Janeiro, De 5 Estrelas, Está Idealmente Localizado Em Frente Às Águas Azuis Da Praia De Copacabana. Disponibiliza Um Spa Elegante E Uma Piscina No Último Piso, Ambos Com Vistas Mar Magníficas.
+                        <?php _e(nl2br('The 5-Star Hilton Copacabana Rio De Janeiro Is Ideally Located Opposite The Blue Waters Of Copacabana Beach. It Offers An Elegant Spa And A Rooftop Pool, Both With Magnificent Sea Views.
 
-            			O Hilton Copacabana Rio De Janeiro Possui Quartos Luminosos E Sofisticados Com Ar Condicionado, Uma Televisão E Um Minibar. Todos Os Quartos Apresentam Um Estilo Elegante Com Mobiliário Em Madeira, Uma Decoração Contemporânea E Acolhedores Tons Naturais. A Maioria Dos Quartos Oferece Vistas Fantásticas Para O Oceano.
+                        The Hilton Copacabana Rio De Janeiro Features Bright And Sophisticated Rooms With Air Conditioning, A Television And A Minibar. All Guestrooms Feature An Elegant Style With Wood Furnishings, Contemporary Decor And Warm Natural Tones. Most Guestrooms Offer Fantastic Ocean Views.
 
-            			O Hilton Copacabana Rio De Janeiro Possui Quartos Luminosos E Sofisticados Com Ar Condicionado, Uma Televisão E Um Minibar. Todos Os Quartos Apresentam Um Estilo Elegante Com Mobiliário Em Madeira, Uma Decoração Contemporânea E Acolhedores Tons Naturais. A Maioria Dos Quartos Oferece Vistas Fantásticas Para O Oceano.
+                        The Hilton Copacabana Rio De Janeiro Features Bright And Sophisticated Rooms With Air Conditioning, A Television And A Minibar. All Guestrooms Feature An Elegant Style With Wood Furnishings, Contemporary Decor And Warm Natural Tones. Most Guestrooms Offer Fantastic Ocean Views.
 
-            			O Hilton Copacabana Rio De Janeiro Possui Quartos Luminosos E Sofisticados Com Ar Condicionado, Uma Televisão E Um Minibar. Todos Os Quartos Apresentam Um Estilo Elegante Com Mobiliário Em Madeira, Uma Decoração Contemporânea E Acolhedores Tons Naturais. A Maioria Dos Quartos Oferece Vistas Fantásticas Para O Oceano.
+                        The Hilton Copacabana Rio De Janeiro Features Bright And Sophisticated Rooms With Air Conditioning, A Television And A Minibar. All Guestrooms Feature An Elegant Style With Wood Furnishings, Contemporary Decor And Warm Natural Tones. Most Guestrooms Offer Fantastic Ocean Views.
 
-            			O Hilton Copacabana Rio De Janeiro Possui Quartos Luminosos E Sofisticados Com Ar Condicionado, Uma Televisão E Um Minibar. Todos Os Quartos Apresentam Um Estilo Elegante Com Mobiliário Em Madeira, Uma Decoração Contemporânea E Acolhedores Tons Naturais. A Maioria Dos Quartos Oferece Vistas Fantásticas Para O Oceano.") ?>                		
+                        The Hilton Copacabana Rio De Janeiro Features Bright And Sophisticated Rooms With Air Conditioning, A Television And A Minibar. All Guestrooms Feature An Elegant Style With Wood Furnishings, Contemporary Decor And Warm Natural Tones. Most Guestrooms Offer Fantastic Ocean Views.'), 'OBPress_RoomPage'); ?>	
                 	</span>
         		
-            		<span class="room-more-description">ler mais</span>
-            		<span class="room-less-description">ler menos</span>
+            		<span class="room-more-description"><?php _e('read more', 'OBPress_RoomPage'); ?></span>
+            		<span class="room-less-description"><?php _e('read less', 'OBPress_RoomPage'); ?></span>
             	</div>
             	
     			<div class="single-room-info-category-section" data-category="Serviços Gerais">
@@ -642,7 +637,7 @@
                                 'Hotel',
                                 'Destination or Hotel',
                                 $counter_for_hotel,
-                                'OBPress_SpecialOffersPage'
+                                'OBPress_RoomPage'
                             ),
                             number_format_i18n( $counter_for_hotel )
                         );                
@@ -651,7 +646,7 @@
                     <input type="text" value="" readonly placeholder="<?php if ( $data->getHotels()[$property]['HotelName'] ) {
                             echo $data->getHotels()[$property]['HotelName'];
                             } else {
-                            _e('All Hotels', 'OBPress_SpecialOffersPage');
+                            _e('All Hotels', 'OBPress_RoomPage');
                             }  ?>" id="hotels" class="<?php if (!empty(get_option('hotel_id'))) {
                                                     echo 'single-hotel';
                                                 } ?>" spellcheck="false" autocomplete="off">
@@ -664,7 +659,7 @@
                     <input type="hidden" name="NRooms" id="NRooms" value="<?php echo $_GET['NRooms'] ?>">
                     <div class="hotels_dropdown">
                         <div class="obpress-mobile-close-hotels-dropdown-holder">
-                            <span>Selecione destino ou hotel</span>
+                            <span><?php _e('Select destination or hotel', 'OBPress_RoomPage'); ?></span>
                             <img src="<?= get_template_directory_uri() ?>/templates/assets/icons/cross_medium.svg" alt="">
                         </div>
                         <div class="obpress-mobile-search-hotels-input-holder">
@@ -676,15 +671,15 @@
 
                 </div>
                 <div class="ob-searchbar-calendar">
-                    <p><?php _e('Dates of stay', 'OBPress_SpecialOffersPage'); ?></p>
+                    <p><?php _e('Dates of stay', 'OBPress_RoomPage'); ?></p>
                     <input class="calendarToggle" type="text" id="calendar_dates" value="<?php echo $CheckInShow ?? date("d/m/Y") ?> - <?php echo $CheckOutShow ?? date("d/m/Y", strtotime("+1 day")) ?>"  readonly>
                     <div class="ob-mobile-searchbar-calendar-holder">
                         <div class="ob-mobile-searchbar-calendar">
-                            <p>Check-in</p>
+                            <p><?php _e('Check-in', 'OBPress_RoomPage'); ?></p>
                             <input class="calendarToggle" type="text" id="check_in_mobile" value="<?php echo $CheckInShowMobile ?? date("d M Y") ?>"  readonly>
                         </div>
                         <div class="ob-mobile-searchbar-calendar">
-                            <p>Check-out</p>
+                            <p><?php _e('Check-out', 'OBPress_RoomPage'); ?></p>
                             <input class="calendarToggle" type="text" id="check_out_mobile" value="<?php echo $CheckOutShowMobile ?? date("d M Y", strtotime("+1 day")) ?>"  readonly>
                         </div>
                     </div>
@@ -692,14 +687,14 @@
                     <input class="calendarToggle" type="hidden" id="date_to" name="CheckOut" value="<?php echo $CheckOut ?? date("dmy", strtotime("+1 day")) ?>">            
                 </div>
                 <div class="ob-searchbar-guests">
-                    <p><?php _e('Rooms and guests', 'OBPress_SpecialOffersPage'); ?></p>
-                    <input type="text" id="guests" data-room="<?php _e('Room', 'OBPress_SpecialOffersPage'); ?>" data-rooms="<?php _e('Rooms', 'OBPress_SpecialOffersPage'); ?>" data-guest="<?php _e('Guest', 'OBPress_SpecialOffersPage'); ?>" data-guests="<?php _e('Guests', 'OBPress_SpecialOffersPage'); ?>" data-remove-room="<?php _e('Remove room', 'OBPress_SpecialOffersPage'); ?>" readonly value="1 Room, 1 Guest">
+                    <p><?php _e('Rooms and guests', 'OBPress_RoomPage'); ?></p>
+                    <input type="text" id="guests" data-room="<?php _e('Room', 'OBPress_RoomPage'); ?>" data-rooms="<?php _e('Rooms', 'OBPress_RoomPage'); ?>" data-guest="<?php _e('Guest', 'OBPress_RoomPage'); ?>" data-guests="<?php _e('Guests', 'OBPress_RoomPage'); ?>" data-remove-room="<?php _e('Remove room', 'OBPress_RoomPage'); ?>" readonly value="1 Room, 1 Guest">
                     <input type="hidden" id="ad" name="ad" value="<?= get_option('calendar_adults') ?>">
                     <input type="hidden" id="ch" name="ch" value="">
                     <input type="hidden" id="ag" name="ag" value="">
                     <div id="occupancy_dropdown" class="position-absolute custom-bg custom-text" data-default-currency="<?= (isset($_GET['currencyId'])) ? $_GET['currencyId'] : get_option('default_currency_id') ?>">
                         <div class="add-room-holder">
-                            <p class="add-room-title select-room-title custom-text"><?php _e('NUMBER OF ROOMS', 'OBPress_SpecialOffersPage') ?></p>
+                            <p class="add-room-title select-room-title custom-text"><?php _e('NUMBER OF ROOMS', 'OBPress_RoomPage') ?></p>
                             <div class="select-room-buttons">
                                 <button class="select-button select-button-minus select-room-minus" type="button" disabled>
 
@@ -714,13 +709,13 @@
                         </div>
                         <div class="select-room-holder">
                             <div class="select-room" data-room-counter="0">
-                                <p class="select-room-title custom-text"><?php _e('Room', 'OBPress_SpecialOffersPage');?> <span class="select-room-counter">1</span></p>
-                                <div class="remove-room-mobile">Remover quarto</div>
+                                <p class="select-room-title custom-text"><?php _e('Room', 'OBPress_RoomPage');?> <span class="select-room-counter">1</span></p>
+                                <div class="remove-room-mobile"><?php _e('Remove room', 'OBPress_RoomPage'); ?></div>
                                 <div class="select-guests-holder">
                                     <div class="select-adults-holder">
                                         <div class="select-adults-title">
                                             <img src="<?= get_template_directory_uri() ?>/templates/assets/icons/adults.svg" alt="">
-                                            <?php _e('Adults', 'OBPress_SpecialOffersPage'); ?>
+                                            <?php _e('Adults', 'OBPress_RoomPage'); ?>
                                         </div>
                                         <div class="select-adults-buttons">
                                             <button class="select-button select-button-minus select-adult-minus" type="button" disabled>
@@ -737,10 +732,10 @@
                                         <div class="select-child-title">
                                             <img src="<?= get_template_directory_uri() ?>/templates/assets/icons/children.svg" alt="">
                                             <div>
-                                                <span><?php _e('Children', 'OBPress_SpecialOffersPage') ?></span>
+                                                <span><?php _e('Children', 'OBPress_RoomPage') ?></span>
                                                 <span class="select-child-title-max-age">
                                                     0 <?php 
-                                                    _e('to the', 'OBPress_SpecialOffersPage') ; 
+                                                    _e('to the', 'OBPress_RoomPage') ; 
                                                     echo " " ; 
                                                     ?>
                                                     <span class='child-max-age'> <?php echo $childrenMaxAge ; ?> </span>
@@ -760,12 +755,12 @@
                                     </div>
                                     <div class="select-child-ages-holder">
                                         <div class="select-child-ages-clone">
-                                            <p class="select-child-ages-title custom-text"><?php _e('Age', 'OBPress_SpecialOffersPage'); ?> <span class="select-child-ages-number"></span></p>
+                                            <p class="select-child-ages-title custom-text"><?php _e('Age', 'OBPress_RoomPage'); ?> <span class="select-child-ages-number"></span></p>
                                             <div class="age-picker"> 
                                                 <span class="age-picker-value">0</span> 
                                                 <div class="age-picker-options">
                                                     <?php for ($i = 0; $i < 18; $i++) : ?>
-                                                        <div data-age="<?= $i; ?>"> <?= $i; ?> anos de idade</div>
+                                                        <div data-age="<?= $i; ?>"> <?= $i; ?> <?php _e('years old', 'OBPress_RoomPage'); ?></div>
                                                     <?php endfor; ?>
                                                 </div>
                                                 <select class="select-child-ages-input-clone">
@@ -775,28 +770,28 @@
                                                 </select>
                                             </div>
                                             <div class="child-ages-input"></div>
-                                            <p class="incorect-age custom-text"><?php _e('Incorrect Age', 'OBPress_SpecialOffersPage') ?></p>
+                                            <p class="incorect-age custom-text"><?php _e('Incorrect Age', 'OBPress_RoomPage') ?></p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="add-room-mobile">+ Adicionar outro quarto</div>
+                                <div class="add-room-mobile">+ <?php _e('add another room', 'OBPress_RoomPage'); ?></div>
                             </div>
                         </div>
                         <button class="btn-ic custom-action-bg custom-action-border custom-action-text select-occupancy-apply" type="button">
-                            <?php _e('Apply', 'OBPress_SpecialOffersPage') ?>
+                            <?php _e('Apply', 'OBPress_RoomPage') ?>
                             <span class="select-occupancy-apply-info">
                                     <span class="select-occupancy-apply-info-rooms" data-rooms="1">1</span>
-                                    <span class="select-occupancy-apply-info-rooms-string">Room</span>
+                                    <span class="select-occupancy-apply-info-rooms-string"><?php _e('Room', 'OBPress_RoomPage'); ?></span>
                                     ,
                                     <span class="select-occupancy-apply-info-guests" data-guests="<?= get_option('calendar_adults') ?>"><?= get_option('calendar_adults') ?></span>
-                                    <span class="select-occupancy-apply-info-guests-string">Guest</span>
+                                    <span class="select-occupancy-apply-info-guests-string"><?php _e('Guest', 'OBPress_RoomPage'); ?></span>
                             </span>
                         </button>
 
                     </div>
                 </div>
                 <div class="ob-searchbar-promo">
-                    <p><?php _e('I have a code', 'OBPress_SpecialOffersPage'); ?></p>
+                    <p><?php _e('I have a code', 'OBPress_RoomPage'); ?></p>
                     <input type="text" id="promo_code" value="" placeholder="Escolha o tipo" readonly>
                     <div class="material-check custom-checkbox-holde ob-mobile-i-have-a-code">
                         <div class="mdc-touch-target-wrapper">
@@ -811,67 +806,67 @@
                             </div>
                         </div>
                         <label class="form-check-label" for="i_have_a_code">
-                            <span class="checkbox-custom-label"><?php _e('I HAVE A CODE', 'OBPress_SpecialOffersPage'); ?></span>
+                            <span class="checkbox-custom-label"><?php _e('I HAVE A CODE', 'OBPress_RoomPage'); ?></span>
                         </label>
                     </div>
                     <div id="promo_code_dropdown" class="position-absolute custom-bg custom-text">
                         <div class="mb-3 mt-2">
-                            <p class="input-title"><?php _e('GROUP CODE', 'OBPress_SpecialOffersPage') ?></p>
+                            <p class="input-title"><?php _e('GROUP CODE', 'OBPress_RoomPage') ?></p>
                             <!-- <input type="text" id="group_code" name="group_code" placeholder="Digite seu código"> -->
                             <div class="material-textfield">
                                 <input type="text" id="group_code" name="group_code" placeholder="Digite seu código">
-                                <span class="label-title"><?php _e('GROUP CODE', 'OBPress_SpecialOffersPage') ?></span>
+                                <span class="label-title"><?php _e('GROUP CODE', 'OBPress_RoomPage') ?></span>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <p class="input-title"><?php _e('PROMO CODE', 'OBPress_SpecialOffersPage'); ?></p>
+                            <p class="input-title"><?php _e('PROMO CODE', 'OBPress_RoomPage'); ?></p>
                             <!-- <input type="text" id="Code" name="Code" placeholder="Digite seu código"> -->
                             <div class="material-textfield">
                                 <input type="text" id="Code" name="Code" placeholder="Digite seu código">
-                                <span class="label-title"><?php _e('PROMO CODE', 'OBPress_SpecialOffersPage'); ?></span>
+                                <span class="label-title"><?php _e('PROMO CODE', 'OBPress_RoomPage'); ?></span>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <p class="input-title"><?php _e('LOYALTY CODE', 'OBPress_SpecialOffersPage') ?></p>
+                            <p class="input-title"><?php _e('LOYALTY CODE', 'OBPress_RoomPage') ?></p>
                             <!-- <input type="text" id="loyalty_code" name="loyalty_code" placeholder="Digite seu código"> -->
                             <div class="material-textfield">
                                 <input type="text" id="loyalty_code" name="loyalty_code" placeholder="Digite seu código">
-                                <span class="label-title"><?php _e('LOYALTY CODE', 'OBPress_SpecialOffersPage') ?></span>
+                                <span class="label-title"><?php _e('LOYALTY CODE', 'OBPress_RoomPage') ?></span>
                             </div>
                         </div>
                         <div class="text-right">
-                            <button id="promo_code_apply" class="custom-action-bg custom-action-text custom-action-border btn-ic"><?php _e('Apply', 'OBPress_SpecialOffersPage'); ?></button>
+                            <button id="promo_code_apply" class="custom-action-bg custom-action-text custom-action-border btn-ic"><?php _e('Apply', 'OBPress_RoomPage'); ?></button>
                         </div>
                     </div>
                 </div>
                 <div class="ob-searchbar-button">
-                    <button class="ob-searchbar-submit" type="button"><?php _e('Search', 'OBPress_SpecialOffersPage'); ?></button>
+                    <button class="ob-searchbar-submit" type="button"><?php _e('Search', 'OBPress_RoomPage'); ?></button>
                 </div> 
             </div>
             <div class="zcalendar-wrap">
                 <div class="ob-zcalendar-top">
                     <div class="ob-zcalendar-title">
-                        <?php _e('Select date of stay', 'OBPress_SpecialOffersPage') ?>
+                        <?php _e('Select date of stay', 'OBPress_RoomPage') ?>
                         <img src="<?= get_template_directory_uri() ?>/templates/assets/icons/cross_medium.svg" alt="">
                     </div>
                     <div class="ob-mobile-weekdays">
                         <div>
-                            <span><?php _e('sun', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('mon', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('tue', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('wed', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('thu', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('fri', 'OBPress_SpecialOffersPage') ?></span>
-                            <span><?php _e('sat', 'OBPress_SpecialOffersPage') ?></span>
+                            <span><?php _e('sun', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('mon', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('tue', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('wed', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('thu', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('fri', 'OBPress_RoomPage') ?></span>
+                            <span><?php _e('sat', 'OBPress_RoomPage') ?></span>
                         </div>
                     </div>
                 </div>
                 <div class="zcalendar-holder" id="calendar-holder">
-                    <div class="zcalendar data-allow-unavail="<?= get_option('allow_unavail_dates') ?> data-allow-unavail="<?= get_option('allow_unavail_dates') ?>" data-promotional="<?php _e('Offers for you', 'OBPress_SpecialOffersPage'); ?>" data-promo="<?php _e('Special Offer', 'OBPress_SpecialOffersPage'); ?>" data-lang="{{$lang->Code}}"  data-night="<?php _e('Night', 'OBPress_SpecialOffersPage') ?>" data-nights="<?php _e('Nights', 'OBPress_SpecialOffersPage') ?>" data-price-for="<?php _e('*Price for', 'OBPress_SpecialOffersPage') ?>" data-adult="<?php _e('adult', 'OBPress_SpecialOffersPage') ?>" data-adults="<?php _e('adults', 'OBPress_SpecialOffersPage') ?>" data-restriction="<?php _e('Restricted Days', 'OBPress_SpecialOffersPage') ?>" data-notavailable="<?php _e('index_no_availability_v4', 'OBPress_SpecialOffersPage') ?>" data-closedonarrival="<?php _e('calendar_closed_on_arrival', 'OBPress_SpecialOffersPage') ?>"  data-closedondeparture="<?php _e('calendar_closed_on_departure', 'OBPress_SpecialOffersPage') ?>" data-minimum-string="<?php _e('system_min', 'OBPress_SpecialOffersPage') ?>" data-maximum-string="<?php _e('system_max', 'OBPress_SpecialOffersPage') ?>" ></div>
+                    <div class="zcalendar data-allow-unavail="<?= get_option('allow_unavail_dates') ?> data-allow-unavail="<?= get_option('allow_unavail_dates') ?>" data-promotional="<?php _e('Offers for you', 'OBPress_RoomPage'); ?>" data-promo="<?php _e('Special Offer', 'OBPress_RoomPage'); ?>" data-lang="{{$lang->Code}}"  data-night="<?php _e('Night', 'OBPress_RoomPage') ?>" data-nights="<?php _e('Nights', 'OBPress_RoomPage') ?>" data-price-for="<?php _e('*Price for', 'OBPress_RoomPage') ?>" data-adult="<?php _e('adult', 'OBPress_RoomPage') ?>" data-adults="<?php _e('adults', 'OBPress_RoomPage') ?>" data-restriction="<?php _e('Restricted Days', 'OBPress_RoomPage') ?>" data-notavailable="<?php _e('index_no_availability_v4', 'OBPress_RoomPage') ?>" data-closedonarrival="<?php _e('calendar_closed_on_arrival', 'OBPress_RoomPage') ?>"  data-closedondeparture="<?php _e('calendar_closed_on_departure', 'OBPress_RoomPage') ?>" data-minimum-string="<?php _e('system_min', 'OBPress_RoomPage') ?>" data-maximum-string="<?php _e('system_max', 'OBPress_RoomPage') ?>" ></div>
                 </div>
                 <div class="ob-zcalendar-bottom">
-                    <div> <span class='mobile-accept-dates-from-to'>Seg, 14 Nov - Sex, 18 Nov</span> <span class="number_of_nights-mobile-span"> ( <span class="number_of_nights-mobile"> 4 Noites</span> )</span> </div>
-                    <div id="mobile-accept-date"> Aplicar </div>
+                    <div> <span class='mobile-accept-dates-from-to'><?php _e('Mon', 'OBPress_RoomPage'); ?>, 14 <?php _e('Nov', 'OBPress_RoomPage'); ?> - <?php _e('Fri', 'OBPress_RoomPage'); ?>, 18 <?php _e('Nov', 'OBPress_RoomPage'); ?></span> <span class="number_of_nights-mobile-span"> ( <span class="number_of_nights-mobile"> 4 <?php _e('Nights', 'OBPress_RoomPage'); ?></span> )</span> </div>
+                    <div id="mobile-accept-date"> <?php _e('Apply', 'OBPress_RoomPage'); ?> </div>
                 </div>
             </div>     
         </form>
@@ -881,16 +876,16 @@
                 <div class="rateplans"> 
                     <div class="single-room-rate-info roomrateinfo">
 						<div class="single-room-rate-name">
-                            Best Available Rate - AI													
+                            <?php _e('Best Available Rate - AI', 'OBPress_RoomPage'); ?>													
 						</div>
                         <div class="cancellation_policy"><?php _e('Non Refundable', 'OBPress_RoomPage') ?></div>
 
 						<div class="included">
                             <span class="meals_included">
-                                <span class="dot">⬤</span> All Inclusive               
+                                <span class="dot">⬤</span> <?php _e('All Inclusive', 'OBPress_RoomPage'); ?>              
                             </span>
                             <span class="service_included">
-                                <span class="dot">⬤</span> Breakfast Extra
+                                <span class="dot">⬤</span> <?php _e('Breakfast Extra', 'OBPress_RoomPage'); ?>
                             </span>
 						</div>
 						<div class="single-room-rate-bottom">
@@ -920,16 +915,16 @@
 					</div>
                     <div class="single-room-rate-info roomrateinfo">
 						<div class="single-room-rate-name">
-                            Best Available Rate - AI													
+                            <?php _e('Best Available Rate - AI', 'OBPress_RoomPage'); ?>														
 						</div>
                         <div class="cancellation_policy"><?php _e('Free Cancellation', 'OBPress_RoomPage') ?></div>
 
 						<div class="included">
                             <span class="meals_included">
-                                <span class="dot">⬤</span> All Inclusive               
+                                <span class="dot">⬤</span> <?php _e('All Inclusive', 'OBPress_RoomPage'); ?>              
                             </span>
                             <span class="service_included">
-                                <span class="dot">⬤</span> Wi-Fi
+                                <span class="dot">⬤</span> <?php _e('Wi-Fi', 'OBPress_RoomPage'); ?>
                             </span>
 						</div>
 						<div class="single-room-rate-bottom">
@@ -946,7 +941,7 @@
 									<span class="single-tax-msg"><?php _e('Includes taxes and fees', 'OBPress_RoomPage') ?></span>
 								</div>
 								<div class="single-room-button">
-                                    <div class="text-number-of-rooms" style="display: block;">Nº de quartos</div>
+                                    <div class="text-number-of-rooms" style="display: block;"><?php _e('Number of rooms', 'OBPress_RoomPage'); ?></div>
 									<div class="obpress-hotel-results-button-bottom"> 
                                         <button href="#" class="room-btn-minus btn-ic custom-action-border custom-action-text custom-action-bg" style="display: flex;">-</button>
                                         <span class="room-btn-value custom-action-border-top custom-action-border-bottom" style="display: flex;">1</span>
@@ -958,16 +953,16 @@
 					</div>
                     <div class="single-room-rate-info roomrateinfo">
 						<div class="single-room-rate-name">
-                            Best Available Rate - AI													
+                            <?php _e('Best Available Rate - AI', 'OBPress_RoomPage'); ?>													
 						</div>
                         <div class="cancellation_policy"><?php _e('Allow Cancellation', 'OBPress_RoomPage') ?> </div>
 
 						<div class="included">
                             <span class="meals_included">
-                                <span class="dot">⬤</span> All Inclusive               
+                                <span class="dot">⬤</span> <?php _e('All Inclusive', 'OBPress_RoomPage'); ?>                
                             </span>
                             <span class="service_included">
-                                <span class="dot">⬤</span> Breakfast Extra
+                                <span class="dot">⬤</span> <?php _e('Breakfast Extra', 'OBPress_RoomPage'); ?>
                             </span>
 						</div>
 						<div class="single-room-rate-bottom">
@@ -988,13 +983,13 @@
                                     <div class="restricted_text_holder">
                                         <div class="los_restricted red-text t-tip__in">
                                             <div class="restriction">
-                                                <span>- Stay a minimum of 3 nights</span>
+                                                <span>- <?php _e('Stay a minimum of 3 nights', 'OBPress_RoomPage'); ?></span>
                                             </div>
                                             <div class="restriction days-in-advance">
-                                                <span>- Book 2 nights in advance</span>
+                                                <span>- <?php _e('Book 2 nights in advance', 'OBPress_RoomPage'); ?></span>
                                             </div>
                                         </div>
-                                        <span class="restricted_modify_search">Change Search</span>
+                                        <span class="restricted_modify_search"><?php _e('Change Search', 'OBPress_RoomPage'); ?></span>
                                     </div>
 								</div>
 
@@ -1062,11 +1057,11 @@
                                     <?php endfor; ?>
                                 </div>
                             </div> 
-                            <p class="obpress-hotel-basket-title">Windsor Florida Hotel</p>
+                            <p class="obpress-hotel-basket-title"><?php _e('Windsor Florida Hotel', 'OBPress_RoomPage'); ?></p>
                             <div class="obpress-hotel-basket-stay-info">
                                 <div class="obpress-hotel-basket-stay-dates">
                                     <span class="obpress-hotel-basket-stay-checkin">
-                                        <span class="obpress-hotel-basket-stay-checkin-string">Check-in</span>
+                                        <span class="obpress-hotel-basket-stay-checkin-string"><?php _e('Check-in', 'OBPress_RoomPage'); ?></span>
                                         <span class="obpress-hotel-basket-stay-checkin-date"><?php  $CheckInBasket = date("d M", strtotime($CheckIn)); echo $CheckInBasket; ?></span>
                                     </span>
                                     <span class="obpress-hotel-searchbar-arrow">
@@ -1100,28 +1095,28 @@
                                         </svg>
                                     </span>
                                     <span class="obpress-hotel-basket-stay-checkout">
-                                        <span class="obpress-hotel-basket-stay-checkout-string">Check-out</span>
+                                        <span class="obpress-hotel-basket-stay-checkout-string"><?php _e('Check-out', 'OBPress_RoomPage'); ?></span>
                                         <span class="obpress-hotel-basket-stay-checkout-date"><?php  $CheckOutBasket = date("d M", strtotime($CheckOut)); echo $CheckOutBasket; ?></span>                            
                                     </span>
                                 </div>
                                 <div class="obpress-hotel-basket-stay-room-info">
                                     <span class="obpress-hotel-basket-stay-rooms">
-                                        <span class="obpress-hotel-basket-stay-rooms-string">Quartos</span>
+                                        <span class="obpress-hotel-basket-stay-rooms-string"><?php _e('Rooms', 'OBPress_RoomPage'); ?></span>
                                         <span class="obpress-hotel-basket-stay-rooms-num"> 1 </span>
                                     </span>
                                     <span class="obpress-hotel-basket-stay-nights">
-                                        <span class="obpress-hotel-basket-stay-nights-string">Noites</span>
+                                        <span class="obpress-hotel-basket-stay-nights-string"><?php _e('Nights', 'OBPress_RoomPage'); ?></span>
                                         <span class="obpress-hotel-basket-stay-nights-num"> <?php echo $nights; ?> </span>                            
                                     </span>
                                     <span class="obpress-hotel-basket-stay-guests">
-                                        <span class="obpress-hotel-basket-stay-guests-string">Hóspedes</span>
+                                        <span class="obpress-hotel-basket-stay-guests-string"><?php _e('Guests', 'OBPress_RoomPage'); ?></span>
                                         <span class="obpress-hotel-basket-stay-guests-num"> <?= (isset($_GET['ad'])) ? $_GET['ad'] : "1" ?> </span>                               
                                     </span>
                                 </div>
                                 <div class="obpress-hotel-searchbar-button-holder">
                                     <button class="obpress-hotel-searchbar-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <svg class="obpress-hotel-searchbar-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:#fff;opacity:0;}.b{fill:none;stroke:#273240;stroke-linecap:round;stroke-width:1.5px;}</style></defs><g transform="translate(12030 20724)"><rect class="a" width="24" height="24" transform="translate(-12030 -20724)"></rect><g transform="translate(-12026 -20720)"><circle class="b" cx="6.5" cy="6.5" r="6.5"></circle></g><line class="b" x2="5.5" y2="5" transform="translate(-12014 -20709.5)"></line></g></svg>
-                                        Modificar
+                                        <?php _e('Modify', 'OBPress_RoomPage'); ?>
                                     </button>
                                 </div>
                             </div>   
@@ -1131,7 +1126,7 @@
                                 <div class="obpress-hotel-results-item-top">
                                     <div class="basket-room-div" rate-id="291171" room-id="38692">
                                         <div class="obpress-hotel-results-item-title-price">
-                                            <span class="obpress-hotel-results-item-title">SUPERIOR DOUBLE</span>
+                                            <span class="obpress-hotel-results-item-title"><?php _e('SUPERIOR DOUBLE', 'OBPress_RoomPage'); ?></span>
                                             <span class="obpress-hotel-results-total-room-selected">
                                                 x
                                                 <span class="obpress-hotel-results-total-room-counter">1</span>
@@ -1142,11 +1137,11 @@
                                             </span>
                                         </div>
                                         <div class="obpress-hotel-results-item-promo-edit">
-                                            <span class="obpress-hotel-results-item-promo">Não Reembolsável</span>
-                                            <span class="obpress-hotel-results-item-edit" style="pointer-events: none;">Remover</span>
+                                            <span class="obpress-hotel-results-item-promo"><?php _e('Not refundable', 'OBPress_RoomPage'); ?></span>
+                                            <span class="obpress-hotel-results-item-edit" style="pointer-events: none;"><?php _e('Remove', 'OBPress_RoomPage'); ?></span>
                                         </div>
                                         <div class="obpress-hotel-results-discount-holder">
-                                            <div class="obpress-hotel-results-discount-message">Discount <span class="obpress-hotel-results-discount-percent"></span></div>
+                                            <div class="obpress-hotel-results-discount-message"><?php _e('Discount', 'OBPress_RoomPage'); ?> <span class="obpress-hotel-results-discount-percent"></span></div>
                                             <div class="obpress-hotel-results-discount-total">
                                                 <span class="obpress-hotel-results-discount-currency">-R$</span>    
                                                 <span class="obpress-hotel-results-discount-price">120.00</span>
@@ -1154,11 +1149,11 @@
                                         </div>
                                         <div class="obpress-hotel-results-tax-holder">
                                             <p class="obpress-hotel-results-tax-title">
-                                                Taxas
+                                                <?php _e('Tax', 'OBPress_RoomPage'); ?>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="14.545" height="14.545" viewBox="0 0 20.545 20.545"><path d="M12.245,18.409H14.3V12.245H12.245ZM13.272,3A10.272,10.272,0,1,0,23.545,13.272,10.276,10.276,0,0,0,13.272,3Zm0,18.49a8.218,8.218,0,1,1,8.218-8.218A8.229,8.229,0,0,1,13.272,21.49Zm-1.027-11.3H14.3V8.136H12.245Z" transform="translate(-3 -3)"></path></svg>
                                             </p>
                                             <div class="obpress-hotel-results-tax-bottom">
-                                                <div class="obpress-hotel-results-tax-message">Taxas de Serviço e ISS</div>
+                                                <div class="obpress-hotel-results-tax-message"><?php _e('Service Tax and ISS', 'OBPress_RoomPage'); ?></div>
                                                 <div class="obpress-hotel-results-tax-total">
                                                     <span class="obpress-hotel-results-tax-currency">R$</span>
                                                     <span class="obpress-hotel-results-tax-price">86.78</span>
@@ -1172,7 +1167,7 @@
                     </div>
                     <div class="obpress-hotel-results-basket-price">
                         <div class="obpress-hotel-total-price-holder">
-                            <span class="obpress-hotel-total-price-string">Total</span>
+                            <span class="obpress-hotel-total-price-string"><?php _e('Total', 'OBPress_RoomPage'); ?></span>
                             <span class="obpress-hotel-total-price">
                                 <span class="font-weight-regular obpress-hotel-total-price-currency">R$</span> 
                                 <span class="obpress-hotel-total-price-value">566,78</span>
@@ -1181,7 +1176,7 @@
                                 <!-- <span class="obpress-hotel-results-pay-up-to">Pay up to <?= $hotel['MaxPartialPaymentParcel']; ?>x</span> -->
                             <?php endif; ?>
                         </div>
-                        <button class="obpress-hotel-submit" id="basket-send" type="button" disabled="">Proximo Passo</button>
+                        <button class="obpress-hotel-submit" id="basket-send" type="button" disabled=""><?php _e('Next step', 'OBPress_RoomPage'); ?></button>
                     </div>
                 </div>
             </div>
@@ -1200,7 +1195,7 @@
         </div>
     </div>
     <div class="search-loading-message">
-        <?php _e("Please wait...", 'OBPressTheme') ?>
+        <?php _e("Please wait...", 'OBPress_RoomPage') ?>
     </div>
 </div>
 
