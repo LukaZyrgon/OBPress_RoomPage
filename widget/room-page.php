@@ -1544,10 +1544,10 @@ class RoomPage extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'size' => 50,
+					'size' => 48,
 				],
 				'mobile_default' => [
-					'size' => 50,
+					'size' => 48,
 				],
 				'range' => [
 					'px' => [
@@ -3456,17 +3456,17 @@ class RoomPage extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'top' => '17',
-					'right' => '0',
-					'bottom' => '14',
-					'left' => '25',
+					'top' => '17.5',
+					'right' => '26.5',
+					'bottom' => '14.5',
+					'left' => '26',
 					'isLinked' => false
 				],
 				'mobile_default' => [
-					'top' => '17',
-					'right' => '0',
-					'bottom' => '14',
-					'left' => '25',
+					'top' => '17.5',
+					'right' => '26.5',
+					'bottom' => '14.5',
+					'left' => '26',
 					'isLinked' => false
 				],
 				'size_units' => [ 'px', '%', 'em' ],
@@ -3690,12 +3690,13 @@ class RoomPage extends \Elementor\Widget_Base
 				'label' => __( 'Basket Stay Info Justify Content', 'OBPress_RoomPage' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'devices' => [ 'desktop', 'mobile' ],
-				'desktop_default' => 'flex-start',
-				'mobile_default' => 'flex-start',
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'flex-start'  => __( 'Flex Start', 'OBPress_RoomPage' ),
 					'center' => __( 'Center', 'OBPress_RoomPage' ),
 					'flex-end'  => __( 'Flex End', 'OBPress_RoomPage' ),
+					'space-between'  => __( 'Space Between', 'OBPress_RoomPage' )
 				],
 				'selectors' => [
 					'.single-room .obpress-hotel-basket-stay-info' => 'justify-content: {{basket_stay_info_justify_content}}'
@@ -3715,7 +3716,7 @@ class RoomPage extends \Elementor\Widget_Base
 					'width' => [
 						'default' => [
 							'top' => '0',
-							'right' => '1',
+							'right' => '0',
 							'bottom' => '0',
 							'left' => '0',
 							'isLinked' => false,
@@ -3737,14 +3738,14 @@ class RoomPage extends \Elementor\Widget_Base
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
 					'top' => '0',
-					'right' => '8',
+					'right' => '0',
 					'bottom' => '0',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
 					'top' => '0',
-					'right' => '8',
+					'right' => '0',
 					'bottom' => '0',
 					'left' => '0',
 					'isLinked' => false
@@ -3962,14 +3963,14 @@ class RoomPage extends \Elementor\Widget_Base
 				'desktop_default' => [
 					'top' => '0',
 					'right' => '8',
-					'bottom' => '0',
+					'bottom' => '3',
 					'left' => '8',
 					'isLinked' => false
 				],
 				'mobile_default' => [
 					'top' => '0',
 					'right' => '8',
-					'bottom' => '0',
+					'bottom' => '3',
 					'left' => '8',
 					'isLinked' => false
 				],
@@ -4062,14 +4063,14 @@ class RoomPage extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'top' => '10',
+					'top' => '0',
 					'right' => '0',
 					'bottom' => '0',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
-					'top' => '10',
+					'top' => '0',
 					'right' => '0',
 					'bottom' => '0',
 					'left' => '0',
@@ -4116,14 +4117,14 @@ class RoomPage extends \Elementor\Widget_Base
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
 					'top' => '20',
-					'right' => '31',
+					'right' => '16.5',
 					'bottom' => '19',
 					'left' => '26',
 					'isLinked' => false
 				],
 				'mobile_default' => [
 					'top' => '20',
-					'right' => '31',
+					'right' => '16.5',
 					'bottom' => '19',
 					'left' => '26',
 					'isLinked' => false
@@ -4909,16 +4910,16 @@ class RoomPage extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'top' => '8',
-					'right' => '31',
-					'bottom' => '22',
+					'top' => '9',
+					'right' => '26.5',
+					'bottom' => '11.75',
 					'left' => '26',
 					'isLinked' => false
 				],
 				'mobile_default' => [
-					'top' => '8',
-					'right' => '31',
-					'bottom' => '22',
+					'top' => '9',
+					'right' => '26.5',
+					'bottom' => '11.75',
 					'left' => '26',
 					'isLinked' => false
 				],
